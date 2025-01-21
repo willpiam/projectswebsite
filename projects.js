@@ -1,0 +1,371 @@
+const projectList = [
+  {
+    name: "Cardano DRep",
+    description: "As a Cardano DRep it is my responsibility to research and vote on proposals...",
+    sourceLinks: [
+      { url: "https://github.com/willpiam/drep/tree/master", displayText: "Off-Chain vote metadata" }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://gov.tools/connected/drep_directory/drep1g2qjfxcxj6ewx3aw0nqh2lfcaq0at3a2wcusxgjmgrnuzph6ddt",
+        displayText: "gov.tools - drep1g2qjfxcxj6ewx3aw0nqh2lfcaq0at3a2wcusxgjmgrnuzph6ddt"
+      },
+      {
+        url: "https://www.1694.io/en/dreps/drep1g2qjfxcxj6ewx3aw0nqh2lfcaq0at3a2wcusxgjmgrnuzph6ddt",
+        displayText: "1694.io - drep1g2qjfxcxj6ewx3aw0nqh2lfcaq0at3a2wcusxgjmgrnuzph6ddt"
+      }
+    ],
+    copyButton: {
+      text: "copy dRep id",
+      copyText: "drep1g2qjfxcxj6ewx3aw0nqh2lfcaq0at3a2wcusxgjmgrnuzph6ddt"
+    }
+  },
+  {
+    name: "Delegate to the Constitutional Convention",
+    description: "Elected as the Voting Delegate to represent the Toronto workshop...",
+    sourceLinks: [
+      {
+        url: "https://github.com/IntersectMBO/draft-constitution/blob/main/2024-12-05/cardano-constitution-1.txt",
+        displayText: "Read The Constitution - unformatted"
+      },
+      {
+        url: "https://github.com/IntersectMBO/draft-constitution/blob/main/2024-12-05/draft-constitution-converted.md",
+        displayText: "Read The Constitution - formatted"
+      },
+      {
+        url: "https://cardanoscan.io/transaction/e7b4da6c9dc46f8cacd5dbc11afd1a9e370c45fb61ad8131f3e2ccde9e851484?tab=metadata",
+        displayText: "Transaction recording my vote"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://docs.intersectmbo.org/cardano/cardano-governance/cardano-constitution#what-is-the-cardano-constitution",
+        displayText: "About the constitution"
+      }
+    ]
+  },
+  {
+    name: "Intersect Founding Member",
+    description: "Intersect is where most of the off-chain work takes place for Cardano's governance.",
+    sourceLinks: [],
+    interfaceLinks: [
+      {
+        url: "https://intersectmbo.org/",
+        displayText: "Intersect"
+      }
+    ]
+  },
+  {
+    name: "Anchor Vault: Quantum Secure Smart Accounts on Ethereum via a Chrome Plugin",
+    description: "Anchor Vault is the culmination of my efforts at Pauli Group...",
+    sourceLinks: [
+      {
+        url: "https://etherscan.io/address/0xBbec2f0bd58EA433BB38ac8ed699DED914087D6f#code",
+        displayText: "Factory On Etherscan"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://chromewebstore.google.com/detail/anchor-vault/omifklijimcjhfiojhodcnfihkljeali",
+        displayText: "Anchor Vault Chrome Plugin"
+      }
+    ]
+  },
+  {
+    name: "LAMB Whitepaper",
+    description: "A document I co-authored outlining Quantum Secure Smart Contract Accounts For EVM Blockchains",
+    sourceLinks: [],
+    interfaceLinks: [
+      {
+        url: "https://anchorwallet.ca/whitepaper/",
+        displayText: "LAMB Whitepaper"
+      }
+    ]
+  },
+  {
+    name: "Mint A Token",
+    description: "Token minting and sales platform built on Cardano...",
+    sourceLinks: [],
+    interfaceLinks: [
+      {
+        url: "https://preview.mintatoken.org/",
+        displayText: "preview.mintatoken.org"
+      }
+    ]
+  },
+  {
+    name: "proof-of-quantum",
+    description: "An NFT platform where NFTs are distributed when an elliptic curve key-pair is broken...",
+    sourceLinks: [
+      {
+        url: "https://polygonscan.com/address/0x34A86B3B9523d2d19Bbf199329983c802B3D4760",
+        displayText: "Polygon Scan - Proof of Quantum"
+      },
+      {
+        url: "https://github.com/Pauli-Group/Type_I_Challenges",
+        displayText: "GitHub - Type I Challenges"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://proof-of-quantum.com/",
+        displayText: "Proof of Quantum Official Site"
+      }
+    ]
+  },
+  {
+    name: "Quantum Secure Account Abstraction (v2)",
+    description: "Easy to use, quantum secure EVM accounts...",
+    sourceLinks: [
+      {
+        url: "https://github.com/Pauli-Group/walletV2",
+        displayText: "GitHub - Quantum Secure Account Abstraction"
+      },
+      {
+        url: "https://sepolia.etherscan.io/address/0xF698E6E1cE4757fC7ffEB5458a9e92EfdC98D943#code",
+        displayText: "Etherscan - Quantum Secure Account Abstraction"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://anchorwallet.ca/waitlist/",
+        displayText: "Anchor Wallet Waitlist"
+      }
+    ]
+  },
+  {
+    name: "Thin Air Coin",
+    description: "A meme coin with an almost unlimited supply...",
+    sourceLinks: [
+      {
+        url: "https://polygonscan.com/token/0x77f7A39f5C5E297A0E9dDd5BAcba44b12cc851b1#code",
+        displayText: "Polygon Scan - Thin Air Coin"
+      },
+      {
+        url: "https://github.com/Pauli-Group/thinair",
+        displayText: "GitHub - Thin Air Coin"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://thinaircoin.com/",
+        displayText: "Thin Air Coin Official Site"
+      }
+    ]
+  },
+  {
+    name: "Cardano Broadcaster Script",
+    description: "An NFT pointing to a datum which is an ever growing list of messages",
+    sourceLinks: [
+      {
+        url: "https://gist.github.com/willpiam/45e806f1a2a37e0e687060ac0711272a",
+        displayText: "GitHub - Cardano Broadcaster Script"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://preview.cardanoscan.io/token/e54af502158e500bff5162180f893e3ab8953482b4fb205d4ef812f76d61676e61206c61626f72756d20636f696e",
+        displayText: "Pointer Token On Preview (magna laborum coin)"
+      }
+    ]
+  },
+  {
+    name: "Anchor Wallet (v1)",
+    description: "A prototype for quantum secure accounts on EVM blockchains...",
+    sourceLinks: [
+      {
+        url: "https://mumbai.polygonscan.com/address/0xF505469Bf06fC1C8221d1Fab089ACF5BE8E8a487#code",
+        displayText: "Polygon Mumbai - Anchor Wallet"
+      },
+      {
+        url: "https://github.com/Pauli-Group/anchor-contracts-public",
+        displayText: "GitHub - Anchor Contracts"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://app.anchorwallet.ca/",
+        displayText: "Anchor Wallet Web Application"
+      }
+    ]
+  },
+  {
+    name: "Midnight Pioneer",
+    description: "Midnight is a privacy focused blockchain being developed by IOG...",
+    sourceLinks: [],
+    interfaceLinks: [] // no links for now
+  },
+  {
+    name: "LAMB Quantum Secure Message Authentication",
+    description: "A smart contract based message authentication system using quantum secure accounts...",
+    sourceLinks: [
+      {
+        url: "https://explorer-mainnet-cardano-evm.c1.milkomeda.com/address/0x5D9F25405384841e27A1440751930Ecc4BF90DBe/contracts#address-tabs",
+        displayText: "Milkomeda Explorer - LAMB Authentication"
+      },
+      {
+        url: "https://github.com/Pauli-Group/LambBedrockAuthentication",
+        displayText: "GitHub - Lamb Bedrock Authentication"
+      },
+      {
+        url: "https://github.com/Pauli-Group/LambBedrockAuthenticationCLI",
+        displayText: "GitHub - Lamb Bedrock CLI"
+      },
+      {
+        url: "https://github.com/Pauli-Group/walletV2/blob/master/contracts/Authenticator/Authenticator.sol",
+        displayText: "GitHub - Bedrock Authentication Contracts"
+      },
+      {
+        url: "https://twitter.com/william00000010/status/1668998715078475777",
+        displayText: "Twitter Post About LAMB Authentication"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://app.anchorwallet.ca/verify",
+        displayText: "LAMB Authentication App"
+      }
+    ]
+  },
+  {
+    name: "Lambda Calculus",
+    description: "An experiment in the foundations of computation...",
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/lambda-calculus/tree/master",
+        displayText: "GitHub - Lambda Calculus"
+      }
+    ],
+    interfaceLinks: []
+  },
+  {
+    name: "Phases Of The Moon",
+    description: "A work in progress, this project involves NFTs which display the current phase of the moon...",
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/MoonContracts",
+        displayText: "GitHub - Moon Contracts"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "http://moon.williamdoyle.ca/",
+        displayText: "Moon Project Official Site"
+      }
+    ]
+  },
+  {
+    name: "Elementary Cellular Automaton",
+    description: "Elementary Cellular Automaton in a bunch of different languages",
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/elementary-cellular-automaton/",
+        displayText: "Github - Elementary Cellular Automaton"
+      }
+    ],
+    interfaceLinks: []
+  },
+  {
+    name: "Lamport Wallet Manager",
+    description: "An off-chain library for interacting with Lamport Authenticated EVM smart contracts",
+    sourceLinks: [
+      {
+        url: "https://github.com/Pauli-Group/LamportWalletManager",
+        displayText: "GitHub - Lamport Wallet Manager"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://www.npmjs.com/package/lamportwalletmanager",
+        displayText: "NPM - Lamport Wallet Manager"
+      }
+    ]
+  },
+  {
+    name: "Aggregate Humanity",
+    description: "AI generated images based on AI generated prompts...",
+    sourceLinks: [
+      {
+        url: "https://snowtrace.io/token/0x48bcac480f22a2dfe42026dde212585e917b7142#code",
+        displayText: "Snow Trace - Aggregate Humanity"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://opensea.io/collection/aggregate-humanity",
+        displayText: "OpenSea - Aggregate Humanity Collection"
+      }
+    ]
+  },
+  {
+    name: "Elementary Cellular Automaton Solidity Contract",
+    description: "Wolfram's Elementary Cellular Automaton implemented as a solidity contract...",
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/ElementaryCellularAutomatonSolidity/blob/master/contracts/ElementaryCellularAutomaton.sol",
+        displayText: "GitHub - Elementary Cellular Automaton"
+      }
+    ],
+    interfaceLinks: []
+  },
+  {
+    name: "Spy Game",
+    description: "A party game I recreated with ChatGPT...",
+    sourceLinks: [],
+    interfaceLinks: [
+      {
+        url: "https://williamdoyle.ca/spygame/",
+        displayText: "Spy Game Official Site"
+      }
+    ]
+  },
+  {
+    name: "RipeMD160 vs Keccak256 for use in Lamport Signatures",
+    description: "An experiment to compare the performance of RipeMD160 and Keccak256...",
+    sourceLinks: [
+      {
+        url: "https://sepolia.etherscan.io/address/0x030Af67f0432731e9D627584a4fc707d9feBfD57#code",
+        displayText: "Etherscan - Comparison Contract"
+      },
+      {
+        url: "https://github.com/Pauli-Group/walletV2/blob/master/contracts/Test/HashComparison.sol",
+        displayText: "GitHub - Comparison Contract"
+      },
+      {
+        url: "https://github.com/Pauli-Group/walletV2/blob/master/scripts/HashComparison.ts",
+        displayText: "GitHub - Comparison Script"
+      },
+      {
+        url: "https://twitter.com/william00000010/status/1682832652104089600",
+        displayText: "Twitter - Summery Of Findings"
+      }
+    ],
+    interfaceLinks: []
+  },
+  {
+    name: "Twitter Account",
+    description: "Mostly tweet'n bout Cardano",
+    sourceLinks: [],
+    interfaceLinks: [
+      {
+        url: "https://twitter.com/william00000010",
+        displayText: "@william00000010"
+      }
+    ],
+    copyButton: {
+      text: "copy twitter handle",
+      copyText: "@william00000010"
+    }
+  },
+  {
+    name: "Payment Addresses And Public Key Collection",
+    description: "Here I keep an extensive list of addresses and public keys...",
+    sourceLinks: [],
+    interfaceLinks: [
+      {
+        url: "https://pay.williamdoyle.ca",
+        displayText: "pay.williamdoyle.ca"
+      }
+    ]
+  }
+];

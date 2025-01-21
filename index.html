@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project List</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="projects.js"></script>
+</head>
+
+<body>
+  <div id="projects"></div>
+
+  <script>
+    const projectContainer = document.getElementById('projects');
+
+    projectList.forEach(project => {
+      const projectElement = document.createElement('div');
+      projectElement.className = 'project';
+
+      const projectName = document.createElement('div');
+      projectName.className = 'project-name';
+      projectName.textContent = project.name;
+
+      const description = document.createElement('div');
+      description.className = 'description';
+      description.textContent = project.description;
+
+      // Helper: Render source links
+      const _sourceLinks = () => {
+        if (!project.sourceLinks || project.sourceLinks.length === 0) return;
+
+        const sourceList = document.createElement('ul');
+        sourceList.className = 'links';
+        sourceList.innerHTML = "<strong>Source Links:</strong>";
+
+        project.sourceLinks.forEach(link => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = link.url;
+          a.textContent = link.displayText;
+          a.target = "_blank";
+          li.appendChild(a);
+          sourceList.appendChild(li);
+        });
+
+        projectElement.appendChild(sourceList);
+      };
+
+      // Helper: Render interface links
+      const _interfaceLinks = () => {
+        if (!project.interfaceLinks || project.interfaceLinks.length === 0) return;
+
+        const interfaceList = document.createElement('ul');
+        interfaceList.className = 'links';
+        interfaceList.innerHTML = "<strong>Interface Links:</strong>";
+
+        project.interfaceLinks.forEach(link => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = link.url;
+          a.textContent = link.displayText;
+          a.target = "_blank";
+          li.appendChild(a);
+          interfaceList.appendChild(li);
+        });
+
+        projectElement.appendChild(interfaceList);
+      };
+
+      // Helper: Render copy button (if present)
+      const _renderCopyButton = () => {
+        if (!project.copyButton) return; // Only proceed if the project has copyButton data
+
+        const copyBtn = document.createElement('button');
+        copyBtn.textContent = project.copyButton.text;
+        copyBtn.addEventListener('click', () => {
+          navigator.clipboard.writeText(project.copyButton.copyText);
+          // Optionally, show some small feedback:
+          // alert("Copied: " + project.copyButton.copyText);
+        });
+
+        projectElement.appendChild(copyBtn);
+      };
+
+      // Append the core elements
+      projectElement.appendChild(projectName);
+      projectElement.appendChild(description);
+
+      // Append the dynamic elements
+      _sourceLinks();
+      _interfaceLinks();
+      _renderCopyButton();
+
+      projectContainer.appendChild(projectElement);
+    });
+  </script>
+</body>
+</html>
