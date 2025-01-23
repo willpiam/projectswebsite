@@ -1,29 +1,59 @@
- body {
-     font-family: Arial, sans-serif;
-     margin: 40px;
- }
+/* Existing CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
 
- .project {
-     border: 1px solid #ddd;
-     padding: 20px;
-     margin-bottom: 20px;
-     border-radius: 5px;
- }
+.project {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    /* Remove position: relative; since we are not using absolute positioning */
+}
 
- .project-name {
-     font-weight: bold;
-     font-size: 1.5em;
- }
+.project-name {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 10px; /* Add some top margin if tag is placed above */
+}
 
- .description {
-     margin: 10px 0;
- }
+.description {
+    margin: 10px 0;
+}
 
- .links {
-     list-style-type: none;
-     padding-left: 0;
- }
+.links {
+    list-style-type: none;
+    padding-left: 0;
+}
 
- .links li {
-     margin-bottom: 5px;
- }
+.links li {
+    margin-bottom: 5px;
+}
+
+.links a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* New CSS for the tag */
+.tag {
+    display: inline-block;
+    background-color: #ffeb3b; /* Light yellow background for visibility */
+    color: #333; /* Dark text for contrast */
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Space between tag and title */
+    /* Optionally, center the tag */
+    /* text-align: center; */
+}

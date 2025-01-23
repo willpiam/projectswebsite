@@ -18,12 +18,20 @@
             }
         })();
     </script> -->
-  <script>
+ <script>
     const projectContainer = document.getElementById('projects');
 
     projectList.forEach(project => {
       const projectElement = document.createElement('div');
       projectElement.className = 'project';
+
+      // If the project has a tag, create and append the tag element
+      if (project.tag) {
+        const tagElement = document.createElement('span');
+        tagElement.className = 'tag';
+        tagElement.textContent = project.tag;
+        projectElement.appendChild(tagElement);
+      }
 
       const projectName = document.createElement('div');
       projectName.className = 'project-name';
@@ -39,7 +47,11 @@
 
         const sourceList = document.createElement('ul');
         sourceList.className = 'links';
-        sourceList.innerHTML = "<strong>Source Links:</strong>";
+
+        // Create and append header
+        const sourceHeader = document.createElement('strong');
+        sourceHeader.textContent = "Source Links:";
+        sourceList.appendChild(sourceHeader);
 
         project.sourceLinks.forEach(link => {
           const li = document.createElement('li');
@@ -60,7 +72,11 @@
 
         const interfaceList = document.createElement('ul');
         interfaceList.className = 'links';
-        interfaceList.innerHTML = "<strong>Interface Links:</strong>";
+
+        // Create and append header
+        const interfaceHeader = document.createElement('strong');
+        interfaceHeader.textContent = "Interface Links:";
+        interfaceList.appendChild(interfaceHeader);
 
         project.interfaceLinks.forEach(link => {
           const li = document.createElement('li');
@@ -84,7 +100,7 @@
         copyBtn.addEventListener('click', () => {
           navigator.clipboard.writeText(project.copyButton.copyText);
           // Optionally, show some small feedback:
-        //   alert("Copied: " + project.copyButton.copyText);
+          // alert("Copied: " + project.copyButton.copyText);
         });
 
         projectElement.appendChild(copyBtn);
@@ -101,6 +117,7 @@
 
       projectContainer.appendChild(projectElement);
     });
-  </script>
+</script>
+ 
 </body>
 </html>
