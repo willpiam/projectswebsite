@@ -18,7 +18,9 @@
             }
         })();
     </script> -->
- <script>
+
+    
+    <script>
     const projectContainer = document.getElementById('projects');
 
     projectList.forEach(project => {
@@ -30,6 +32,13 @@
         const tagElement = document.createElement('span');
         tagElement.className = 'tag';
         tagElement.textContent = project.tag;
+
+        // Set the background color based on the tags object
+        const tagColor = tags[project.tag];
+        if (tagColor) {
+            tagElement.style.setProperty('--tag-bg-color', tagColor);
+        }
+
         projectElement.appendChild(tagElement);
       }
 
@@ -118,6 +127,7 @@
       projectContainer.appendChild(projectElement);
     });
 </script>
+
  
 </body>
 </html>

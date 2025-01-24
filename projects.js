@@ -93,6 +93,7 @@ const projectList = [
   {
     name: "Mint A Token",
     description: "Token minting and sales platform built on Cardano. This product is still in preview and is not yet available on mainnet",
+    tag: "Blockchain",
     sourceLinks: [],
     interfaceLinks: [
       {
@@ -167,6 +168,7 @@ const projectList = [
   {
     name: "Cardano Broadcaster Script",
     description: "An NFT pointing to a datum which is an ever growing list of messages",
+    tag: "Blockchain",
     sourceLinks: [
       {
         url: "https://gist.github.com/willpiam/45e806f1a2a37e0e687060ac0711272a",
@@ -369,6 +371,7 @@ const projectList = [
   {
     name: "Twitter Account",
     description: "Mostly tweet'n bout Cardano",
+    tag: "Social Media",
     sourceLinks: [],
     interfaceLinks: [
       {
@@ -384,6 +387,7 @@ const projectList = [
   {
     name: "Payment Addresses And Public Key Collection",
     description: "Here I keep an extensive list of addresses and public keys. You can use these to send me money, encrypt messages for me, or verify my signatures.",
+    tag: "identity",
     sourceLinks: [],
     interfaceLinks: [
       {
@@ -393,3 +397,16 @@ const projectList = [
     ]
   }
 ];
+
+
+const tags = {
+  "Cardano Governance": "#afeb3b",  
+  "Quantum Security": "yellow",     
+  "Blockchain - Fun": "#2196f3",   
+  "Blockchain": "#9e9e9e",    
+  "In Progress": "#ff9800",  
+  "Fun": "#E31C79",         
+  "Web - Experimental": "pink",
+  "Social Media": "lightblue",
+  "identity": "lightgreen"
+};
