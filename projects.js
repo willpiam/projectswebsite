@@ -17,6 +17,10 @@ const projectList = [
       {
         url: "https://www.1694.io/en/dreps/drep1g2qjfxcxj6ewx3aw0nqh2lfcaq0at3a2wcusxgjmgrnuzph6ddt",
         displayText: "1694.io - drep1g2qjfxcxj6ewx3aw0nqh2lfcaq0at3a2wcusxgjmgrnuzph6ddt"
+      },
+      {
+        url: "https://cardanoscan.io/drep/drep1yfpgzfymq6tt9c684e7vzata8r5pl4w84fmrjqeztdqw0sgpzw3nt?tab=votes",
+        displayText: "Cardano Scan - My Voting History"
       }
     ],
     copyButton: {
@@ -393,6 +397,18 @@ const projectList = [
       {
         url: "https://pay.williamdoyle.ca",
         displayText: "pay.williamdoyle.ca"
+      }
+    ]
+  },
+  {
+    name: "williamdoyle.eth",
+    description: "My ENS domain. Includes a list of addresses on various blockchains.",
+    tag: "identity",
+    sourceLinks: [],
+    interfaceLinks: [
+      {
+        url: "https://app.ens.domains/williamdoyle.eth",
+        displayText: "williamdoyle.eth"
       }
     ]
   }

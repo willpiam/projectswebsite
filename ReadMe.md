@@ -8,5 +8,5 @@ This is a list of my work
 
 ## Feature plans
 
-- [ ] topic tags - indicate topic each belongs to
+- [x] topic tags - indicate topic each belongs to
 - [ ] consider support for multiple tags per project
