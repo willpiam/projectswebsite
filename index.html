@@ -27,19 +27,21 @@
       const projectElement = document.createElement('div');
       projectElement.className = 'project';
 
-      // If the project has a tag, create and append the tag element
-      if (project.tag) {
-        const tagElement = document.createElement('span');
-        tagElement.className = 'tag';
-        tagElement.textContent = project.tag;
+      // If the project has tags, create and append the tag elements
+      if (project.tags && project.tags.length > 0) {
+        project.tags.forEach(tag => {
+          const tagElement = document.createElement('span');
+          tagElement.className = 'tag';
+          tagElement.textContent = tag;
 
-        // Set the background color based on the tags object
-        const tagColor = tags[project.tag];
-        if (tagColor) {
-            tagElement.style.setProperty('--tag-bg-color', tagColor);
-        }
+          // Set the background color based on the tags object
+          const tagColor = tags[tag];
+          if (tagColor) {
+              tagElement.style.setProperty('--tag-bg-color', tagColor);
+          }
 
-        projectElement.appendChild(tagElement);
+          projectElement.appendChild(tagElement);
+        });
       }
 
       const projectName = document.createElement('div');
@@ -100,19 +102,21 @@
         projectElement.appendChild(interfaceList);
       };
 
-      // Helper: Render copy button (if present)
+      // Helper: Render buttons (if present)
       const _renderCopyButton = () => {
-        if (!project.copyButton) return; // Only proceed if the project has copyButton data
+        if (!project.buttons || project.buttons.length === 0) return; // Only proceed if the project has buttons
 
-        const copyBtn = document.createElement('button');
-        copyBtn.textContent = project.copyButton.text;
-        copyBtn.addEventListener('click', () => {
-          navigator.clipboard.writeText(project.copyButton.copyText);
-          // Optionally, show some small feedback:
-          // alert("Copied: " + project.copyButton.copyText);
+        project.buttons.forEach(btn => {
+          const copyBtn = document.createElement('button');
+          copyBtn.textContent = btn.text;
+          copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(btn.copyText);
+            // Optionally, show some small feedback:
+            // alert("Copied: " + btn.copyText);
+          });
+
+          projectElement.appendChild(copyBtn);
         });
-
-        projectElement.appendChild(copyBtn);
       };
 
       // Append the core elements
@@ -126,7 +130,7 @@
 
       projectContainer.appendChild(projectElement);
     });
-</script>
+    </script>
 
  
 </body>

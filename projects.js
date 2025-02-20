@@ -2,7 +2,7 @@ const projectList = [
   {
     name: "Cardano DRep",
     description: "As a Cardano DRep it is my responsibility to research and vote on proposals. My platform is based on ensuring the long term viability of Cardano through financial conservatism, proactive preparedness, and careful development. Before the Chang hardfork I participated in the sanchonet testnet. Please consider delegating to my DRep campaign to help ensure the success of Cardano for generations to come.",
-    tag: "Cardano Governance",
+    tags: ["Cardano Governance", "Blockchain"],
     sourceLinks: [
       {
         url: "https://github.com/willpiam/drep/tree/master",
@@ -23,15 +23,21 @@ const projectList = [
         displayText: "Cardano Scan - My Voting History"
       }
     ],
-    copyButton: {
-      text: "copy dRep id",
-      copyText: "drep1g2qjfxcxj6ewx3aw0nqh2lfcaq0at3a2wcusxgjmgrnuzph6ddt"
-    }
+    buttons: [
+      {
+        text: "copy dRep id",
+        copyText: "drep1g2qjfxcxj6ewx3aw0nqh2lfcaq0at3a2wcusxgjmgrnuzph6ddt"
+      }, 
+      {
+        text: "copy dRep id (CIP-129)",
+        copyText: "drep1yfpgzfymq6tt9c684e7vzata8r5pl4w84fmrjqeztdqw0sgpzw3nt"
+      }
+    ]
   },
   {
     name: "Delegate to the Constitutional Convention",
     description: "Elected as the Voting Delegate to represent the Toronto workshop at the constitutional convention in Buenos Aires, I experienced the opportunity of a lifetime. Not only did I apply my knowledge of Cardano to contribute positively to the constitution, but I also formed friendships with many incredible individuals from around the world.",
-    tag: "Cardano Governance",
+    tags: ["Cardano Governance", "Blockchain"],
     sourceLinks: [
       {
         url: "https://github.com/IntersectMBO/draft-constitution/blob/main/2024-12-05/cardano-constitution-1.txt",
@@ -51,24 +57,26 @@ const projectList = [
         url: "https://docs.intersectmbo.org/cardano/cardano-governance/cardano-constitution#what-is-the-cardano-constitution",
         displayText: "About the constitution"
       }
-    ]
+    ],
+    buttons: []
   },
   {
     name: "Intersect Founding Member",
     description: "Intersect is where most of the off-chain work takes place for Cardano's governance. ",
-    tag: "Cardano Governance",
+    tags: ["Cardano Governance", "Blockchain"],
     sourceLinks: [],
     interfaceLinks: [
       {
         url: "https://intersectmbo.org/",
         displayText: "Intersect"
       }
-    ]
+    ],
+    buttons: []
   },
   {
     name: "Anchor Vault: Quantum Secure Smart Accounts on Ethereum via a Chrome Plugin",
     description: "Anchor Vault is the culmination of my efforts at Pauli Group to create a user friendly yet post-quantum secure account solution. The application is distributed as a chrome browser plugin. The smart contracts are erc-4337 (account abstraction) compatible meaning the user experience is very similar to a normal Ethereum account. A novel approach to signature verification was taken. Users commit to a set of initial keys. Each key can be used only once in either Lamport (quantum secure) or ECDSA mode but not both. This means using ECDSA keys does not compromise the account to a future attack from quantum computers, this also helps prevent reuse of Lamport keys which are unsafe to use twice. Additional keys can be added in a separate operation but by default the software automatically appends three key commitments to every operation, helping ensure the user cannot run out of keys. AES encrypted backups of separate “key rings” can be created to ensure the user always has a secure recovery mechanism.",
-    tag: "Quantum Security",
+    tags: ["Quantum Security", "Blockchain"],
     sourceLinks: [
       {
         url: "https://etherscan.io/address/0xBbec2f0bd58EA433BB38ac8ed699DED914087D6f#code",
@@ -80,36 +88,39 @@ const projectList = [
         url: "https://chromewebstore.google.com/detail/anchor-vault/omifklijimcjhfiojhodcnfihkljeali",
         displayText: "Anchor Vault Chrome Plugin"
       }
-    ]
+    ],
+    buttons: []
   },
   {
     name: "LAMB Whitepaper",
     description: "A document I co-authored outlining Quantum Secure Smart Contract Accounts For EVM Blockchains",
-    tag: "Quantum Security",
+    tags: ["Quantum Security", "Blockchain"],
     sourceLinks: [],
     interfaceLinks: [
       {
         url: "https://anchorwallet.ca/whitepaper/",
         displayText: "LAMB Whitepaper"
       }
-    ]
+    ],
+    buttons: []
   },
   {
     name: "Mint A Token",
     description: "Token minting and sales platform built on Cardano. This product is still in preview and is not yet available on mainnet",
-    tag: "Blockchain",
+    tags: ["Blockchain"],
     sourceLinks: [],
     interfaceLinks: [
       {
         url: "https://preview.mintatoken.org/",
         displayText: "preview.mintatoken.org"
       }
-    ]
+    ],
+    buttons: []
   },
   {
     name: "proof-of-quantum",
     description: "An NFT platform where NFTs are distributed when an elliptic curve key-pair is broken. The goal of this project was to measure the pace of progress in quantum computing and provide an estimate on when bitcoin accounts will be breakable by quantum computers.",
-    tag: "Quantum Security",
+    tags: ["Quantum Security", "Blockchain"],
     sourceLinks: [
       {
         url: "https://polygonscan.com/address/0x34A86B3B9523d2d19Bbf199329983c802B3D4760",
@@ -125,12 +136,13 @@ const projectList = [
         url: "https://proof-of-quantum.com/",
         displayText: "Proof of Quantum Official Site"
       }
-    ]
+    ],
+    buttons: []
   },
   {
     name: "Quantum Secure Account Abstraction (v2)",
     description: "Easy to use, quantum secure EVM accounts. These accounts use ERC4337 to provide seamless user experience. Consider joining the beta to try out our mobile app ",
-    tag: "Quantum Security",
+    tags: ["Quantum Security", "Blockchain"],
     sourceLinks: [
       {
         url: "https://github.com/Pauli-Group/walletV2",
@@ -146,12 +158,13 @@ const projectList = [
         url: "https://anchorwallet.ca/waitlist/",
         displayText: "Anchor Wallet Waitlist"
       }
-    ]
+    ],
+    buttons: []
   },
   {
     name: "Thin Air Coin",
     description: "A meme coin with an almost unlimited supply. 1 token can be minted for every atom of nitrogen in the atmosphere and there are no minting fees. Celebrating the SECs weird comments about our industry. Plus, a unique graffiti feature. This project is not intended to be taken seriously, but you can get some $THINAIR for free.",
-    tag: "Blockchain - Fun",
+    tags: ["Blockchain", "Fun"],
     sourceLinks: [
       {
         url: "https://polygonscan.com/token/0x77f7A39f5C5E297A0E9dDd5BAcba44b12cc851b1#code",
@@ -167,12 +180,13 @@ const projectList = [
         url: "https://thinaircoin.com/",
         displayText: "Thin Air Coin Official Site"
       }
-    ]
+    ],
+    buttons: []
   },
   {
     name: "Cardano Broadcaster Script",
     description: "An NFT pointing to a datum which is an ever growing list of messages",
-    tag: "Blockchain",
+    tags: ["Blockchain", "Simple Experiment"],
     sourceLinks: [
       {
         url: "https://gist.github.com/willpiam/45e806f1a2a37e0e687060ac0711272a",
@@ -184,12 +198,13 @@ const projectList = [
         url: "https://preview.cardanoscan.io/token/e54af502158e500bff5162180f893e3ab8953482b4fb205d4ef812f76d61676e61206c61626f72756d20636f696e",
         displayText: "Pointer Token On Preview (magna laborum coin)"
       }
-    ]
+    ],
+    buttons: []
   },
   {
     name: "Anchor Wallet (v1)",
     description: "A prototype for quantum secure accounts on EVM blockchains. These use lamport signatures to achieve quantum security.",
-    tag: "Quantum Security",
+    tags: ["Quantum Security", "Blockchain"],
     sourceLinks: [
       {
         url: "https://mumbai.polygonscan.com/address/0xF505469Bf06fC1C8221d1Fab089ACF5BE8E8a487#code",
@@ -205,19 +220,21 @@ const projectList = [
         url: "https://app.anchorwallet.ca/",
         displayText: "Anchor Wallet Web Application"
       }
-    ]
+    ],
+    buttons: []
   },
   {
     name: "Midnight Pioneer",
-    tag: "Blockchain",
+    tags: ["Blockchain"],
     description: "Midnight is a privacy focused blockchain being developed by IOG. I have the privilege of being a part of the early testnet. Since late November 2023 I've been experimenting with Compact, the smart contract language for Midnight. I cannot yet publicly share any of the code I've written, but I can tell you about it in person. ",
     sourceLinks: [],
-    interfaceLinks: []
+    interfaceLinks: [],
+    buttons: []
   },
   {
     name: "LAMB Quantum Secure Message Authentication",
     description: "A smart contract based message authentication system using quantum secure accounts. This has a more refined key management solution than what is used in the Anchor Wallet prototype.",
-    tag: "Quantum Security",
+    tags: ["Quantum Security", "Blockchain"],
     sourceLinks: [
       {
         url: "https://explorer-mainnet-cardano-evm.c1.milkomeda.com/address/0x5D9F25405384841e27A1440751930Ecc4BF90DBe/contracts#address-tabs",
@@ -245,24 +262,26 @@ const projectList = [
         url: "https://app.anchorwallet.ca/verify",
         displayText: "LAMB Authentication App"
       }
-    ]
+    ],
+    buttons: []
   },
   {
     name: "Lambda Calculus",
     description: "An experiment in the foundations of computation. I've implemented the lambda calculus in JavaScript. Church numerals, the Z combinator, even a function to tell if a number is prime.",
-    tag: "Fun",
+    tags: ["Fun"],
     sourceLinks: [
       {
         url: "https://github.com/willpiam/lambda-calculus/tree/master",
         displayText: "GitHub - Lambda Calculus"
       }
     ],
-    interfaceLinks: []
+    interfaceLinks: [],
+    buttons: []
   },
   {
     name: "Phases Of The Moon",
     description: "A work in progress, this project involves NFTs which display the current phase of the moon. The phase is calculated from the current block timestamp. Currently the contracts are only available on the Sepolia testnet.",
-    tag: "Blockchain - Fun",
+    tags: ["Blockchain", "Fun"],
     sourceLinks: [
       {
         url: "https://github.com/willpiam/MoonContracts",
@@ -274,24 +293,26 @@ const projectList = [
         url: "http://moon.williamdoyle.ca/",
         displayText: "Moon Project Official Site"
       }
-    ]
+    ],
+    buttons: []
   },
   {
     name: "Elementary Cellular Automaton",
     description: "Elementary Cellular Automaton in a bunch of different languages",
-    tag: "Fun",
+    tags: ["Fun"],
     sourceLinks: [
       {
         url: "https://github.com/willpiam/elementary-cellular-automaton/",
         displayText: "Github - Elementary Cellular Automaton"
       }
     ],
-    interfaceLinks: []
+    interfaceLinks: [],
+    buttons: []
   },
   {
     name: "Lamport Wallet Manager",
     description: "An off-chain library for interacting with Lamport Authenticated EVM smart contracts",
-    tag: "Quantum Security",
+    tags: ["Quantum Security", "Blockchain"],
     sourceLinks: [
       {
         url: "https://github.com/Pauli-Group/LamportWalletManager",
@@ -303,12 +324,13 @@ const projectList = [
         url: "https://www.npmjs.com/package/lamportwalletmanager",
         displayText: "NPM - Lamport Wallet Manager"
       }
-    ]
+    ],
+    buttons: []
   },
   {
     name: "Aggregate Humanity",
     description: "AI generated images based on AI generated prompts. The idea being that has GPT and DALL-E have given us a view into the aggregate of our culture.",
-    tag: "Blockchain - Fun",
+    tags: ["Blockchain", "Fun"],
     sourceLinks: [
       {
         url: "https://snowtrace.io/token/0x48bcac480f22a2dfe42026dde212585e917b7142#code",
@@ -320,24 +342,26 @@ const projectList = [
         url: "https://opensea.io/collection/aggregate-humanity",
         displayText: "OpenSea - Aggregate Humanity Collection"
       }
-    ]
+    ],
+    buttons: []
   },
   {
     name: "Elementary Cellular Automaton Solidity Contract",
     description: "Wolfram's Elementary Cellular Automaton implemented as a solidity contract. Admittedly, this is sort of a \"just for fun\" project. None the less I think it's interesting.",
-    tag: "Blockchain - Fun",
+    tags: ["Blockchain", "Fun"],
     sourceLinks: [
       {
         url: "https://github.com/willpiam/ElementaryCellularAutomatonSolidity/blob/master/contracts/ElementaryCellularAutomaton.sol",
         displayText: "GitHub - Elementary Cellular Automaton"
       }
     ],
-    interfaceLinks: []
+    interfaceLinks: [],
+    buttons: []
   },
   {
     name: "Spy Game",
     description: "Spy Game is a party game I recreated with ChatGPT. It took about 40 minutes from scratch to a working prototype. This demonstrates how LLMs like ChatGPT can be used to supercharge an experienced developer.",
-    tag: "Web - Experimental",
+    tags: ["Web - Experimental"],
     sourceLinks: [
       // No source links provided
     ],
@@ -346,12 +370,13 @@ const projectList = [
         url: "https://williamdoyle.ca/spygame/",
         displayText: "Spy Game Official Site"
       }
-    ]
+    ],
+    buttons: []
   },
   {
     name: "RipeMD160 vs Keccak256 for use in Lamport Signatures",
     description: "An experiment to compare the performance of RipeMD160 and Keccak256 for use in Lamport Signatures on EVM blockchains. The results were that despite RipeMD160 being a precompile, while Keccak256 an opcode, RipeMD160 based lamport signatures were cheaper to verify because they require smaller message hashes and thus smaller keys and signatures.",
-    tag: "Quantum Security",
+    tags: ["Quantum Security", "Blockchain"],
     sourceLinks: [
       {
         url: "https://sepolia.etherscan.io/address/0x030Af67f0432731e9D627584a4fc707d9feBfD57#code",
@@ -370,12 +395,13 @@ const projectList = [
         displayText: "Twitter - Summery Of Findings"
       }
     ],
-    interfaceLinks: []
+    interfaceLinks: [],
+    buttons: []
   },
   {
     name: "Twitter Account",
     description: "Mostly tweet'n bout Cardano",
-    tag: "Social Media",
+    tags: ["Social Media"],
     sourceLinks: [],
     interfaceLinks: [
       {
@@ -383,34 +409,38 @@ const projectList = [
         displayText: "@william00000010"
       }
     ],
-    copyButton: {
-      text: "copy twitter handle",
-      copyText: "@william00000010"
-    }
+    buttons: [
+      {
+        text: "copy twitter handle",
+        copyText: "@william00000010"
+      }
+    ]
   },
   {
     name: "Payment Addresses And Public Key Collection",
     description: "Here I keep an extensive list of addresses and public keys. You can use these to send me money, encrypt messages for me, or verify my signatures.",
-    tag: "identity",
+    tags: ["identity"],
     sourceLinks: [],
     interfaceLinks: [
       {
         url: "https://pay.williamdoyle.ca",
         displayText: "pay.williamdoyle.ca"
       }
-    ]
+    ],
+    buttons: []
   },
   {
     name: "williamdoyle.eth",
     description: "My ENS domain. Includes a list of addresses on various blockchains.",
-    tag: "identity",
+    tags: ["identity"],
     sourceLinks: [],
     interfaceLinks: [
       {
         url: "https://app.ens.domains/williamdoyle.eth",
         displayText: "williamdoyle.eth"
       }
-    ]
+    ],
+    buttons: []
   }
 ];
 
@@ -424,5 +454,6 @@ const tags = {
   "Fun": "#E31C79",         
   "Web - Experimental": "pink",
   "Social Media": "lightblue",
-  "identity": "lightgreen"
+  "identity": "lightgreen",
+  "Simple Experiment": "hotpink"
 };

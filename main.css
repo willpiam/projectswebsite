@@ -1,44 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
 
- body {
-     font-family: Arial, sans-serif;
-     margin: 40px;
- }
+.project {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
 
- .project {
-     border: 1px solid #ddd;
-     padding: 20px;
-     margin-bottom: 20px;
-     border-radius: 5px;
- }
+.project-name {
+    font-weight: bold;
+    font-size: 1.5em;
+}
 
- .project-name {
-     font-weight: bold;
-     font-size: 1.5em;
- }
+.description {
+    margin: 10px 0;
+}
 
- .description {
-     margin: 10px 0;
- }
+.links {
+    list-style-type: none;
+    padding-left: 0;
+}
 
- .links {
-     list-style-type: none;
-     padding-left: 0;
- }
+.links li {
+    margin-bottom: 5px;
+}
 
- .links li {
-     margin-bottom: 5px;
- }
-
+/* Added extra margin for spacing around tags */
 .tag {
     display: inline-block;
-    /* Removed fixed background-color to allow dynamic colors */
     background-color: var(--tag-bg-color, #ffeb3b); /* Fallback color if not set */
     color: #333; /* Dark text for contrast */
     padding: 5px 10px;
     border-radius: 3px;
     font-size: 12px;
     font-weight: bold;
-    margin-bottom: 10px; /* Space between tag and title */
-    /* Optionally, center the tag */
-    /* text-align: center; */
+    margin-bottom: 10px; /* Existing bottom space */
+    margin-right: 10px;  /* New space to the right */
+}
+
+/* NEW: Add some margin to buttons */
+.project button {
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
