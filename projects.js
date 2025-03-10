@@ -266,6 +266,19 @@ const projectList = [
     buttons: []
   },
   {
+    name: "λ Calculus Language",
+    description: "A simple programming language based on the λ calculus",
+    tags: ["Fun"],
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/lambda-calculus-language",
+        displayText: "GitHub - λ Calculus Language"
+      }
+    ],
+    interfaceLinks: [],
+    buttons: []
+  },
+  {
     name: "Lambda Calculus",
     description: "An experiment in the foundations of computation. I've implemented the lambda calculus in JavaScript. Church numerals, the Z combinator, even a function to tell if a number is prime.",
     tags: ["Fun"],
@@ -430,6 +443,19 @@ const projectList = [
     buttons: []
   },
   {
+    "name": "KISS my AES",
+    "description": "A very simple tool to encrypt and decrypt messages using AES. K.I.S.S - Keep It Simple Stupid",
+    "tags": ["Utility"],
+    "sourceLinks": [],
+    "interfaceLinks": [
+      {
+        "url": "https://williamdoyle.ca/kiss_my_AES.html",
+        "displayText": "KISS my AES"
+      }
+    ],
+    "buttons": []
+  },
+  {
     name: "williamdoyle.eth",
     description: "My ENS domain. Includes a list of addresses on various blockchains.",
     tags: ["identity"],
@@ -440,7 +466,12 @@ const projectList = [
         displayText: "williamdoyle.eth"
       }
     ],
-    buttons: []
+    buttons: [
+      {
+        text: "copy ENS",
+        copyText: "williamdoyle.eth"
+      }
+    ]
   }
 ];
 
@@ -455,5 +486,6 @@ const tags = {
   "Web - Experimental": "pink",
   "Social Media": "lightblue",
   "identity": "lightgreen",
-  "Simple Experiment": "hotpink"
+  "Simple Experiment": "hotpink",
+  "Utility": "#E1BEE7"
 };
