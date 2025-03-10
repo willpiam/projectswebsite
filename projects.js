@@ -27,7 +27,7 @@ const projectList = [
       {
         text: "copy dRep id",
         copyText: "drep1g2qjfxcxj6ewx3aw0nqh2lfcaq0at3a2wcusxgjmgrnuzph6ddt"
-      }, 
+      },
       {
         text: "copy dRep id (CIP-129)",
         copyText: "drep1yfpgzfymq6tt9c684e7vzata8r5pl4w84fmrjqeztdqw0sgpzw3nt"
@@ -179,6 +179,19 @@ const projectList = [
       {
         url: "https://thinaircoin.com/",
         displayText: "Thin Air Coin Official Site"
+      }
+    ],
+    buttons: []
+  },
+  {
+    name: "🔨 Tools",
+    description: "A collection of tools I've written",
+    tags: ["Utility"],
+    sourceLinks: [],
+    interfaceLinks: [
+      {
+        url: "https://williamdoyle.ca/tools.html",
+        displayText: "Tools"
       }
     ],
     buttons: []
@@ -371,6 +384,7 @@ const projectList = [
     interfaceLinks: [],
     buttons: []
   },
+
   {
     name: "Spy Game",
     description: "Spy Game is a party game I recreated with ChatGPT. It took about 40 minutes from scratch to a working prototype. This demonstrates how LLMs like ChatGPT can be used to supercharge an experienced developer.",
@@ -443,19 +457,6 @@ const projectList = [
     buttons: []
   },
   {
-    "name": "KISS my AES",
-    "description": "A very simple tool to encrypt and decrypt messages using AES. K.I.S.S - Keep It Simple Stupid",
-    "tags": ["Utility"],
-    "sourceLinks": [],
-    "interfaceLinks": [
-      {
-        "url": "https://williamdoyle.ca/kiss_my_AES.html",
-        "displayText": "KISS my AES"
-      }
-    ],
-    "buttons": []
-  },
-  {
     name: "williamdoyle.eth",
     description: "My ENS domain. Includes a list of addresses on various blockchains.",
     tags: ["identity"],
@@ -477,12 +478,12 @@ const projectList = [
 
 
 const tags = {
-  "Cardano Governance": "#afeb3b",  
-  "Quantum Security": "yellow",     
-  "Blockchain - Fun": "#2196f3",   
-  "Blockchain": "#9e9e9e",    
-  "In Progress": "#ff9800",  
-  "Fun": "#E31C79",         
+  "Cardano Governance": "#afeb3b",
+  "Quantum Security": "yellow",
+  "Blockchain - Fun": "#2196f3",
+  "Blockchain": "#9e9e9e",
+  "In Progress": "#ff9800",
+  "Fun": "#E31C79",
   "Web - Experimental": "pink",
   "Social Media": "lightblue",
   "identity": "lightgreen",
