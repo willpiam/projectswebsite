@@ -187,10 +187,15 @@ const projectList = [
     name: "🔨 Tools",
     description: "A collection of tools I've written",
     tags: ["Utility"],
-    sourceLinks: [],
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/tools",
+        displayText: "GitHub - Tools"
+      }
+    ],
     interfaceLinks: [
       {
-        url: "https://williamdoyle.ca/tools.html",
+        url: "https://williamdoyle.ca/tools",
         displayText: "Tools"
       }
     ],
