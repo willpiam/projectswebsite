@@ -61,19 +61,6 @@ const projectList = [
     buttons: []
   },
   {
-    name: "Intersect Founding Member",
-    description: "Intersect is where most of the off-chain work takes place for Cardano's governance. ",
-    tags: ["Cardano Governance", "Blockchain"],
-    sourceLinks: [],
-    interfaceLinks: [
-      {
-        url: "https://intersectmbo.org/",
-        displayText: "Intersect"
-      }
-    ],
-    buttons: []
-  },
-  {
     name: "Anchor Vault: Quantum Secure Smart Accounts on Ethereum via a Chrome Plugin",
     description: "Anchor Vault is the culmination of my efforts at Pauli Group to create a user friendly yet post-quantum secure account solution. The application is distributed as a chrome browser plugin. The smart contracts are erc-4337 (account abstraction) compatible meaning the user experience is very similar to a normal Ethereum account. A novel approach to signature verification was taken. Users commit to a set of initial keys. Each key can be used only once in either Lamport (quantum secure) or ECDSA mode but not both. This means using ECDSA keys does not compromise the account to a future attack from quantum computers, this also helps prevent reuse of Lamport keys which are unsafe to use twice. Additional keys can be added in a separate operation but by default the software automatically appends three key commitments to every operation, helping ensure the user cannot run out of keys. AES encrypted backups of separate “key rings” can be created to ensure the user always has a secure recovery mechanism.",
     tags: ["Quantum Security", "Blockchain"],
@@ -92,6 +79,32 @@ const projectList = [
     buttons: []
   },
   {
+    name: "TURN Classic",
+    description: "A CoinJoin style mixer for Cardano with support for Ada and CNTs ",
+    tags: ["Blockchain", "In Progress"],
+    sourceLinks: [
+      {
+        url: "https://github.com/turn-privacy",
+        displayText: "GitHub"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://medium.com/@networkturn/litepaper-n-1f903bda83d3",
+        displayText: "Read The Litepaper"
+      },
+      {
+        url: "https://x.com/turnprotocol",
+        displayText: "Follow On X"
+      },
+      {
+        url: "https://discord.com/invite/4BTgMb9BBB",
+        displayText: "Join On Discord"
+      }
+    ],
+    buttons: []
+  },
+  {
     name: "LAMB Whitepaper",
     description: "A document I co-authored outlining Quantum Secure Smart Contract Accounts For EVM Blockchains",
     tags: ["Quantum Security", "Blockchain"],
@@ -100,6 +113,19 @@ const projectList = [
       {
         url: "https://anchorwallet.ca/whitepaper/",
         displayText: "LAMB Whitepaper"
+      }
+    ],
+    buttons: []
+  },
+  {
+    name: "Intersect Founding Member",
+    description: "Intersect is where most of the off-chain work takes place for Cardano's governance. ",
+    tags: ["Cardano Governance", "Blockchain"],
+    sourceLinks: [],
+    interfaceLinks: [
+      {
+        url: "https://intersectmbo.org/",
+        displayText: "Intersect"
       }
     ],
     buttons: []
@@ -493,5 +519,6 @@ const tags = {
   "Social Media": "lightblue",
   "identity": "lightgreen",
   "Simple Experiment": "hotpink",
-  "Utility": "#E1BEE7"
+  "Utility": "#E1BEE7",
+  "In Progress": "orange"
 };
