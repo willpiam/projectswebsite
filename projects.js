@@ -465,6 +465,10 @@ const projectList = [
       {
         url: "https://twitter.com/william00000010",
         displayText: "@william00000010"
+      },
+      {
+        url: "https://xcancel.com/william00000010",
+        displayText: "XCancel - @william00000010"
       }
     ],
     buttons: [
