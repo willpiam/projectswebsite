@@ -79,6 +79,19 @@ const projectList = [
     buttons: []
   },
   {
+    name: "Spearmint",
+    description: "A tool for minting CIP-68 tokens with proper support for burning",
+    tags: ["Blockchain"],
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/Spearmint",
+        displayText: "GitHub"
+      }
+    ],
+    interfaceLinks: [],
+    buttons: []
+  },
+  {
     name: "TURN Classic",
     description: "A CoinJoin style mixer for Cardano with support for Ada and CNTs ",
     tags: ["Blockchain", "In Progress"],
