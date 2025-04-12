@@ -91,32 +91,32 @@ const projectList = [
     interfaceLinks: [],
     buttons: []
   },
-  {
-    name: "TURN Classic",
-    description: "A CoinJoin style mixer for Cardano with support for Ada and CNTs ",
-    tags: ["Blockchain", "In Progress"],
-    sourceLinks: [
-      {
-        url: "https://github.com/turn-privacy",
-        displayText: "GitHub"
-      }
-    ],
-    interfaceLinks: [
-      {
-        url: "https://medium.com/@networkturn/litepaper-n-1f903bda83d3",
-        displayText: "Read The Litepaper"
-      },
-      {
-        url: "https://x.com/turnprotocol",
-        displayText: "Follow On X"
-      },
-      {
-        url: "https://discord.com/invite/4BTgMb9BBB",
-        displayText: "Join On Discord"
-      }
-    ],
-    buttons: []
-  },
+  // {
+  //   name: "TURN Classic",
+  //   description: "A CoinJoin style mixer for Cardano with support for Ada and CNTs ",
+  //   tags: ["Blockchain", "In Progress"],
+  //   sourceLinks: [
+  //     {
+  //       url: "https://github.com/turn-privacy",
+  //       displayText: "GitHub"
+  //     }
+  //   ],
+  //   interfaceLinks: [
+  //     {
+  //       url: "https://medium.com/@networkturn/litepaper-n-1f903bda83d3",
+  //       displayText: "Read The Litepaper"
+  //     },
+  //     {
+  //       url: "https://x.com/turnprotocol",
+  //       displayText: "Follow On X"
+  //     },
+  //     {
+  //       url: "https://discord.com/invite/4BTgMb9BBB",
+  //       displayText: "Join On Discord"
+  //     }
+  //   ],
+  //   buttons: []
+  // },
   {
     name: "LAMB Whitepaper",
     description: "A document I co-authored outlining Quantum Secure Smart Contract Accounts For EVM Blockchains",
