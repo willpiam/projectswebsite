@@ -131,6 +131,24 @@ const projectList = [
     buttons: []
   },
   {
+    name: "Lamport Signatures On Cardano", 
+    description: "A simple proof of concept for using Lamport signatures on Cardano.",
+    tags: ["Quantum Security", "Blockchain"],
+    sourceLinks: [
+      { 
+        url: "https://github.com/willpiam/lamport-cardano/tree/master",
+        displayText: "GitHub"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://preview.cardanoscan.io/transaction/eb5f4c1350987fc15d9fad530c659fee952f5d67dd6664796684ef96773bc84b",
+        displayText: "demo: verification of a lamport signature on testnet"
+      }
+    ],
+    buttons: [] 
+  },
+  {
     name: "Intersect Founding Member",
     description: "Intersect is where most of the off-chain work takes place for Cardano's governance. ",
     tags: ["Cardano Governance", "Blockchain"],
@@ -380,6 +398,19 @@ const projectList = [
     buttons: []
   },
   {
+    name: "Bitcoin Coinbase Spend Analysis",
+    description: "A script to gather and plot data about when early bitcoin coinbases are spent. The data is stored in an sqlite database and plotted using matplotlib.",
+    tags: ["Blockchain", "Analysis"],
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/bitcoin-coinbase-spend-analysis",
+        displayText: "GitHub - Bitcoin Coinbase Spend Analysis"
+      }
+    ],
+    interfaceLinks: [],
+    buttons: []
+  },
+  {
     name: "Lamport Wallet Manager",
     description: "An off-chain library for interacting with Lamport Authenticated EVM smart contracts",
     tags: ["Quantum Security", "Blockchain"],
@@ -447,7 +478,7 @@ const projectList = [
   {
     name: "RipeMD160 vs Keccak256 for use in Lamport Signatures",
     description: "An experiment to compare the performance of RipeMD160 and Keccak256 for use in Lamport Signatures on EVM blockchains. The results were that despite RipeMD160 being a precompile, while Keccak256 an opcode, RipeMD160 based lamport signatures were cheaper to verify because they require smaller message hashes and thus smaller keys and signatures.",
-    tags: ["Quantum Security", "Blockchain"],
+    tags: ["Quantum Security", "Blockchain", "Analysis"],
     sourceLinks: [
       {
         url: "https://sepolia.etherscan.io/address/0x030Af67f0432731e9D627584a4fc707d9feBfD57#code",
@@ -537,5 +568,6 @@ const tags = {
   "identity": "lightgreen",
   "Simple Experiment": "hotpink",
   "Utility": "#E1BEE7",
-  "In Progress": "orange"
+  "In Progress": "orange",
+  "Analysis": "#B695C0"
 };
