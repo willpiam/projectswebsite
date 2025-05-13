@@ -10,3 +10,7 @@ This is a list of my work
 
 - [x] topic tags - indicate topic each belongs to
 - [x] consider support for multiple tags per project
+- [ ] sort by options
+    - [ ] recent github activity
+- [ ] filter by tag
+- [ ] search
