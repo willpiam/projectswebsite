@@ -11,6 +11,10 @@ const projectList = [
     ],
     interfaceLinks: [
       {
+        url: "https://cardano-tools-delta.vercel.app/",
+        displayText: "Delegate To Me"
+      },
+      {
         url: "https://gov.tools/connected/drep_directory/drep1g2qjfxcxj6ewx3aw0nqh2lfcaq0at3a2wcusxgjmgrnuzph6ddt",
         displayText: "gov.tools - drep1g2qjfxcxj6ewx3aw0nqh2lfcaq0at3a2wcusxgjmgrnuzph6ddt"
       },
@@ -254,6 +258,23 @@ const projectList = [
       }
     ],
   },
+  {
+    name: "On-Chain Commitment tools",
+    description: "Commit messages and files to the blockchain permanently. Options include posting cleartext, message hashes, file hashes, or password-encrypted messages. A Cardano wallet is required.",
+    tags: ["Blockchain", "Utility"],
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/cardano-tools",
+        displayText: "GitHub - Cardano Tools"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://cardano-tools-delta.vercel.app/commit",
+        displayText: "On-Chain Commitment tools"
+      }
+    ],
+  },
    {
     name: "Thin Air Coin",
     description: "A meme coin with an almost unlimited supply. 1 token can be minted for every atom of nitrogen in the atmosphere and there are no minting fees. Celebrating the SECs weird comments about our industry. Plus, a unique graffiti feature. This project is not intended to be taken seriously, but you can get some $THINAIR for free.",
@@ -446,53 +467,53 @@ const projectList = [
     ],
     buttons: []
   },
-  {
-    name: "Aggregate Humanity",
-    description: "AI generated images based on AI generated prompts. The idea being that has GPT and DALL-E have given us a view into the aggregate of our culture.",
-    tags: ["Blockchain", "Fun"],
-    sourceLinks: [
-      {
-        url: "https://snowtrace.io/token/0x48bcac480f22a2dfe42026dde212585e917b7142#code",
-        displayText: "Snow Trace - Aggregate Humanity"
-      }
-    ],
-    interfaceLinks: [
-      {
-        url: "https://opensea.io/collection/aggregate-humanity",
-        displayText: "OpenSea - Aggregate Humanity Collection"
-      }
-    ],
-    buttons: []
-  },
-  {
-    name: "Elementary Cellular Automaton Solidity Contract",
-    description: "Wolfram's Elementary Cellular Automaton implemented as a solidity contract. Admittedly, this is sort of a \"just for fun\" project. None the less I think it's interesting.",
-    tags: ["Blockchain", "Fun"],
-    sourceLinks: [
-      {
-        url: "https://github.com/willpiam/ElementaryCellularAutomatonSolidity/blob/master/contracts/ElementaryCellularAutomaton.sol",
-        displayText: "GitHub - Elementary Cellular Automaton"
-      }
-    ],
-    interfaceLinks: [],
-    buttons: []
-  },
+  // {
+  //   name: "Aggregate Humanity",
+  //   description: "AI generated images based on AI generated prompts. The idea being that has GPT and DALL-E have given us a view into the aggregate of our culture.",
+  //   tags: ["Blockchain", "Fun"],
+  //   sourceLinks: [
+  //     {
+  //       url: "https://snowtrace.io/token/0x48bcac480f22a2dfe42026dde212585e917b7142#code",
+  //       displayText: "Snow Trace - Aggregate Humanity"
+  //     }
+  //   ],
+  //   interfaceLinks: [
+  //     {
+  //       url: "https://opensea.io/collection/aggregate-humanity",
+  //       displayText: "OpenSea - Aggregate Humanity Collection"
+  //     }
+  //   ],
+  //   buttons: []
+  // },
+  // {
+  //   name: "Elementary Cellular Automaton Solidity Contract",
+  //   description: "Wolfram's Elementary Cellular Automaton implemented as a solidity contract. Admittedly, this is sort of a \"just for fun\" project. None the less I think it's interesting.",
+  //   tags: ["Blockchain", "Fun"],
+  //   sourceLinks: [
+  //     {
+  //       url: "https://github.com/willpiam/ElementaryCellularAutomatonSolidity/blob/master/contracts/ElementaryCellularAutomaton.sol",
+  //       displayText: "GitHub - Elementary Cellular Automaton"
+  //     }
+  //   ],
+  //   interfaceLinks: [],
+  //   buttons: []
+  // },
 
-  {
-    name: "Spy Game",
-    description: "Spy Game is a party game I recreated with ChatGPT. It took about 40 minutes from scratch to a working prototype. This demonstrates how LLMs like ChatGPT can be used to supercharge an experienced developer.",
-    tags: ["Web - Experimental"],
-    sourceLinks: [
-      // No source links provided
-    ],
-    interfaceLinks: [
-      {
-        url: "https://williamdoyle.ca/spygame/",
-        displayText: "Spy Game Official Site"
-      }
-    ],
-    buttons: []
-  },
+  // {
+  //   name: "Spy Game",
+  //   description: "Spy Game is a party game I recreated with ChatGPT. It took about 40 minutes from scratch to a working prototype. This demonstrates how LLMs like ChatGPT can be used to supercharge an experienced developer.",
+  //   tags: ["Web - Experimental"],
+  //   sourceLinks: [
+  //     // No source links provided
+  //   ],
+  //   interfaceLinks: [
+  //     {
+  //       url: "https://williamdoyle.ca/spygame/",
+  //       displayText: "Spy Game Official Site"
+  //     }
+  //   ],
+  //   buttons: []
+  // },
   {
     name: "RipeMD160 vs Keccak256 for use in Lamport Signatures",
     description: "An experiment to compare the performance of RipeMD160 and Keccak256 for use in Lamport Signatures on EVM blockchains. The results were that despite RipeMD160 being a precompile, while Keccak256 an opcode, RipeMD160 based lamport signatures were cheaper to verify because they require smaller message hashes and thus smaller keys and signatures.",
