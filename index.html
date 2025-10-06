@@ -29,8 +29,20 @@
     function renderProjects(filterText = '') {
       projectContainer.innerHTML = '';
 
+      const lower = filterText.toLowerCase();
+
       projectList
-        .filter(project => project.name.toLowerCase().includes(filterText.toLowerCase()))
+        .filter(project => {
+          if (!lower) return true; // show all if no filter
+          return project.name.toLowerCase().includes(lower) || project.description.toLowerCase().includes(lower);
+        })
+        // Sort: name matches first, then description-only matches
+        .sort((a, b) => {
+          const aNameMatch = a.name.toLowerCase().includes(lower);
+          const bNameMatch = b.name.toLowerCase().includes(lower);
+          if (aNameMatch === bNameMatch) return 0;
+          return aNameMatch ? -1 : 1; // a before b if aNameMatch
+        })
         .forEach(project => {
           const projectElement = document.createElement('div');
           projectElement.className = 'project';
