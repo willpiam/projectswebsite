@@ -10,6 +10,17 @@ body {
     border-radius: 5px;
 }
 
+/* Search bar styling to match project card width */
+#searchBar {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
 .project-name {
     font-weight: bold;
     font-size: 1.5em;

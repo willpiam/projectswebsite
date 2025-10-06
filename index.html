@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
 </head>
 
 <body>
+  <input type="text" id="searchBar" placeholder="Search projects..." />
   <div id="projects"></div>
 
   <!-- <script>
@@ -19,119 +21,135 @@
         })();
     </script> -->
 
-    
-    <script>
+
+  <script>
     const projectContainer = document.getElementById('projects');
+    const searchBar = document.getElementById('searchBar');
 
-    projectList.forEach(project => {
-      const projectElement = document.createElement('div');
-      projectElement.className = 'project';
+    function renderProjects(filterText = '') {
+      projectContainer.innerHTML = '';
 
-      // If the project has tags, create and append the tag elements
-      if (project.tags && project.tags.length > 0) {
-        project.tags.forEach(tag => {
-          const tagElement = document.createElement('span');
-          tagElement.className = 'tag';
-          tagElement.textContent = tag;
+      projectList
+        .filter(project => project.name.toLowerCase().includes(filterText.toLowerCase()))
+        .forEach(project => {
+          const projectElement = document.createElement('div');
+          projectElement.className = 'project';
 
-          // Set the background color based on the tags object
-          const tagColor = tags[tag];
-          if (tagColor) {
-              tagElement.style.setProperty('--tag-bg-color', tagColor);
+          // If the project has tags, create and append the tag elements
+          if (project.tags && project.tags.length > 0) {
+            project.tags.forEach(tag => {
+              const tagElement = document.createElement('span');
+              tagElement.className = 'tag';
+              tagElement.textContent = tag;
+
+              // Set the background color based on the tags object
+              const tagColor = tags[tag];
+              if (tagColor) {
+                tagElement.style.setProperty('--tag-bg-color', tagColor);
+              }
+
+              projectElement.appendChild(tagElement);
+            });
           }
 
-          projectElement.appendChild(tagElement);
+          const projectName = document.createElement('div');
+          projectName.className = 'project-name';
+          projectName.textContent = project.name;
+
+          const description = document.createElement('div');
+          description.className = 'description';
+          description.textContent = project.description;
+
+          // Helper: Render source links
+          const _sourceLinks = () => {
+            if (!project.sourceLinks || project.sourceLinks.length === 0) return;
+
+            const sourceList = document.createElement('ul');
+            sourceList.className = 'links';
+
+            // Create and append header
+            const sourceHeader = document.createElement('strong');
+            sourceHeader.textContent = "Source Links:";
+            sourceList.appendChild(sourceHeader);
+
+            project.sourceLinks.forEach(link => {
+              const li = document.createElement('li');
+              const a = document.createElement('a');
+              a.href = link.url;
+              a.textContent = link.displayText;
+              a.target = "_blank";
+              li.appendChild(a);
+              sourceList.appendChild(li);
+            });
+
+            projectElement.appendChild(sourceList);
+          };
+
+          // Helper: Render interface links
+          const _interfaceLinks = () => {
+            if (!project.interfaceLinks || project.interfaceLinks.length === 0) return;
+
+            const interfaceList = document.createElement('ul');
+            interfaceList.className = 'links';
+
+            // Create and append header
+            const interfaceHeader = document.createElement('strong');
+            interfaceHeader.textContent = "Interface Links:";
+            interfaceList.appendChild(interfaceHeader);
+
+            project.interfaceLinks.forEach(link => {
+              const li = document.createElement('li');
+              const a = document.createElement('a');
+              a.href = link.url;
+              a.textContent = link.displayText;
+              a.target = "_blank";
+              li.appendChild(a);
+              interfaceList.appendChild(li);
+            });
+
+            projectElement.appendChild(interfaceList);
+          };
+
+          // Helper: Render buttons (if present)
+          const _renderCopyButton = () => {
+            if (!project.buttons || project.buttons.length === 0) return; // Only proceed if the project has buttons
+
+            project.buttons.forEach(btn => {
+              const copyBtn = document.createElement('button');
+              copyBtn.textContent = btn.text;
+              copyBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(btn.copyText);
+                // Optionally, show some small feedback:
+                // alert("Copied: " + btn.copyText);
+              });
+
+              projectElement.appendChild(copyBtn);
+            });
+          };
+
+          // Append the core elements
+          projectElement.appendChild(projectName);
+          projectElement.appendChild(description);
+
+          // Append the dynamic elements
+          _sourceLinks();
+          _interfaceLinks();
+          _renderCopyButton();
+
+          projectContainer.appendChild(projectElement);
         });
-      }
+    }
 
-      const projectName = document.createElement('div');
-      projectName.className = 'project-name';
-      projectName.textContent = project.name;
+    // initial render
+    renderProjects();
 
-      const description = document.createElement('div');
-      description.className = 'description';
-      description.textContent = project.description;
-
-      // Helper: Render source links
-      const _sourceLinks = () => {
-        if (!project.sourceLinks || project.sourceLinks.length === 0) return;
-
-        const sourceList = document.createElement('ul');
-        sourceList.className = 'links';
-
-        // Create and append header
-        const sourceHeader = document.createElement('strong');
-        sourceHeader.textContent = "Source Links:";
-        sourceList.appendChild(sourceHeader);
-
-        project.sourceLinks.forEach(link => {
-          const li = document.createElement('li');
-          const a = document.createElement('a');
-          a.href = link.url;
-          a.textContent = link.displayText;
-          a.target = "_blank";
-          li.appendChild(a);
-          sourceList.appendChild(li);
-        });
-
-        projectElement.appendChild(sourceList);
-      };
-
-      // Helper: Render interface links
-      const _interfaceLinks = () => {
-        if (!project.interfaceLinks || project.interfaceLinks.length === 0) return;
-
-        const interfaceList = document.createElement('ul');
-        interfaceList.className = 'links';
-
-        // Create and append header
-        const interfaceHeader = document.createElement('strong');
-        interfaceHeader.textContent = "Interface Links:";
-        interfaceList.appendChild(interfaceHeader);
-
-        project.interfaceLinks.forEach(link => {
-          const li = document.createElement('li');
-          const a = document.createElement('a');
-          a.href = link.url;
-          a.textContent = link.displayText;
-          a.target = "_blank";
-          li.appendChild(a);
-          interfaceList.appendChild(li);
-        });
-
-        projectElement.appendChild(interfaceList);
-      };
-
-      // Helper: Render buttons (if present)
-      const _renderCopyButton = () => {
-        if (!project.buttons || project.buttons.length === 0) return; // Only proceed if the project has buttons
-
-        project.buttons.forEach(btn => {
-          const copyBtn = document.createElement('button');
-          copyBtn.textContent = btn.text;
-          copyBtn.addEventListener('click', () => {
-            navigator.clipboard.writeText(btn.copyText);
-            // Optionally, show some small feedback:
-            // alert("Copied: " + btn.copyText);
-          });
-
-          projectElement.appendChild(copyBtn);
-        });
-      };
-
-      // Append the core elements
-      projectElement.appendChild(projectName);
-      projectElement.appendChild(description);
-
-      // Append the dynamic elements
-      _sourceLinks();
-      _interfaceLinks();
-      _renderCopyButton();
-
-      projectContainer.appendChild(projectElement);
+    // re-render on search input
+    searchBar.addEventListener('input', (e) => {
+      renderProjects(e.target.value);
     });
-    </script>
+  </script>
 
- 
+
 </body>
+
 </html>
