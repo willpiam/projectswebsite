@@ -13,4 +13,4 @@ This is a list of my work
 - [ ] sort by options
     - [ ] recent github activity
 - [ ] filter by tag
-- [ ] search
+- [x] search

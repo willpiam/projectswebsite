@@ -10,7 +10,6 @@ body {
     border-radius: 5px;
 }
 
-/* Search bar styling to match project card width */
 #searchBar {
     box-sizing: border-box;
     width: 100%;
@@ -39,7 +38,6 @@ body {
     margin-bottom: 5px;
 }
 
-/* Added extra margin for spacing around tags */
 .tag {
     display: inline-block;
     background-color: var(--tag-bg-color, #ffeb3b); /* Fallback color if not set */
@@ -48,11 +46,11 @@ body {
     border-radius: 3px;
     font-size: 12px;
     font-weight: bold;
-    margin-bottom: 10px; /* Existing bottom space */
-    margin-right: 10px;  /* New space to the right */
+    margin-bottom: 10px; 
+    margin-right: 10px;  
 }
 
-/* NEW: Add some margin to buttons */
+
 .project button {
     margin-right: 10px;
     margin-bottom: 10px;
