@@ -225,7 +225,7 @@ const projectList = [
  
   {
     name: "🔨 Tools",
-    description: "A collection of tools I've written",
+    description: "A collection of digital tools I've written. These include security utilities such as a password generator and encryption tools, developer tools like the hex encoder/decoder and hex differ, and general convenience tools such as a dice roller and QR code generator.",
     tags: ["Utility"],
     sourceLinks: [
       {
