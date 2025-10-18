@@ -14,3 +14,5 @@ This is a list of my work
     - [ ] recent github activity
 - [ ] filter by tag
 - [x] search
+- [ ] use web components 
+- [ ] simplify deployment process. It would be nice to use vercel to publish on commit
