@@ -380,13 +380,17 @@ const projectList = [
     buttons: []
   },
   {
-    name: "λ Calculus Language",
-    description: "A simple programming language based on the λ calculus",
+    name: "λ Lambda Calculus Language",
+    description: "A simple programming language based on lambda calculus. The lambda symbol is replaced with a dollar sign for easier typing. Functions can be labeled using the walrus operator. The language transpiles to JavaScript using a transpiler itself written in JavaScript.",
     tags: ["Fun"],
     sourceLinks: [
       {
         url: "https://github.com/willpiam/lambda-calculus-language",
         displayText: "GitHub - λ Calculus Language"
+      },
+      {
+        url: "https://github.com/willpiam/lambda-calculus-language/blob/master/prime.lc",
+        displayText: "A program to check if a number is prime"
       }
     ],
     interfaceLinks: [],
