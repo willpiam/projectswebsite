@@ -39,6 +39,17 @@ const projectList = [
     ]
   },
   {
+    name: "EBP: Even Better Privacy",
+    description: "EBP (Even Better Privacy) is a post-quantum successor to PGP with a CLI, GUI, public identity server, and a Chromium email extension that adds signing/encryption to webmail. It uses NIST approved post-quantum algorithms; SLH-DSA (SPHINCS+) and ML-DSA (Dilithium) for signatures, and ML-KEM (Kyber) for key encapsulation--with messages encrypted under a fresh symmetric AES key per message. Identities are defined as paired signing + KEM keys with a shared fingerprint, and EBP supports publishing identities and signed revocations.",
+    tags: ["Quantum Security"], 
+    sourceLinks: [{
+      url: "https://github.com/willpiam/even-better-privacy",
+      displayText: "GitHub - EBP"
+    }],
+    interfaceLinks: [],
+    buttons: []
+  },
+  {
     name: "Delegate to the Constitutional Convention",
     description: "Elected as the Voting Delegate to represent the Toronto workshop at the constitutional convention in Buenos Aires, I experienced the opportunity of a lifetime. Not only did I apply my knowledge of Cardano to contribute positively to the constitution, but I also formed friendships with many incredible individuals from around the world.",
     tags: ["Cardano Governance", "Blockchain"],
