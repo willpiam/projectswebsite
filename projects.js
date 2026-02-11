@@ -46,7 +46,12 @@ const projectList = [
       url: "https://github.com/willpiam/even-better-privacy",
       displayText: "GitHub - EBP"
     }],
-    interfaceLinks: [],
+    interfaceLinks: [
+      {
+        url: "https://williamdoyle.ca/ebp",
+        displayText: "EBP - Even Better Privacy"
+      }
+    ],
     buttons: []
   },
   {
