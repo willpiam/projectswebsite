@@ -352,15 +352,7 @@ const projectList = [
       }
     ],
     buttons: []
-  },
-  {
-    name: "Midnight Pioneer",
-    tags: ["Blockchain"],
-    description: "Midnight is a privacy focused blockchain being developed by IOG. I have the privilege of being a part of the early testnet. Since late November 2023 I've been experimenting with Compact, the smart contract language for Midnight. I cannot yet publicly share any of the code I've written, but I can tell you about it in person. ",
-    sourceLinks: [],
-    interfaceLinks: [],
-    buttons: []
-  },
+  }, 
   {
     name: "LAMB Quantum Secure Message Authentication",
     description: "A smart contract based message authentication system using quantum secure accounts. This has a more refined key management solution than what is used in the Anchor Wallet prototype.",
@@ -409,6 +401,19 @@ const projectList = [
         displayText: "A program to check if a number is prime"
       }
     ],
+    interfaceLinks: [
+      {
+        url: "https://williamdoyle.ca/lambda-calculus-language/",
+        displayText: "Use Lambda Calculus Language in your browser"
+      }
+    ],
+    buttons: []
+  },
+  {
+    name: "Midnight Pioneer",
+    tags: ["Blockchain"],
+    description: "Midnight is a privacy focused blockchain being developed by IOG. I have the privilege of being a part of the early testnet. Since late November 2023 I've been experimenting with Compact, the smart contract language for Midnight. I cannot yet publicly share any of the code I've written, but I can tell you about it in person. ",
+    sourceLinks: [],
     interfaceLinks: [],
     buttons: []
   },
