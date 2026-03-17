@@ -81,6 +81,24 @@ const projectList = [
     buttons: []
   },
   {
+    name: "dRep Of The Month",
+    description: "I created a site to highlight a different dRep and SPO every month. The goal is to encourage decentralization of the dReps and SPOs by highlighting a new pair each month.",
+    tags: ["Cardano Governance", "Blockchain"],
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/drep-of-the-month",
+        displayText: "GitHub - dRep Of The Month"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://drep-of-the-month.onrender.com/",
+        displayText: "dRep Of The Month"
+      }
+    ],
+    buttons: []
+  },
+  {
     name: "Anchor Vault: Quantum Secure Smart Accounts on Ethereum via a Chrome Plugin",
     description: "Anchor Vault is the culmination of my efforts at Pauli Group to create a user friendly yet post-quantum secure account solution. The application is distributed as a chrome browser plugin. The smart contracts are erc-4337 (account abstraction) compatible meaning the user experience is very similar to a normal Ethereum account. A novel approach to signature verification was taken. Users commit to a set of initial keys. Each key can be used only once in either Lamport (quantum secure) or ECDSA mode but not both. This means using ECDSA keys does not compromise the account to a future attack from quantum computers, this also helps prevent reuse of Lamport keys which are unsafe to use twice. Additional keys can be added in a separate operation but by default the software automatically appends three key commitments to every operation, helping ensure the user cannot run out of keys. AES encrypted backups of separate “key rings” can be created to ensure the user always has a secure recovery mechanism.",
     tags: ["Quantum Security", "Blockchain"],
