@@ -92,7 +92,8 @@ const projectList = [
     ],
     interfaceLinks: [
       {
-        url: "https://drep-of-the-month.onrender.com/",
+       // url: "https://drep-of-the-month.onrender.com/",
+       url: "https://drep-of-the-month.williamdoyle.ca/",
         displayText: "dRep Of The Month"
       }
     ],
