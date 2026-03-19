@@ -95,6 +95,10 @@ const projectList = [
        // url: "https://drep-of-the-month.onrender.com/",
        url: "https://drep-of-the-month.williamdoyle.ca/",
         displayText: "dRep Of The Month"
+      },
+      {
+        url: "https://drep-of-the-month.onrender.com/",
+        displayText: "dRep Of The Month - onrender | may work better on some devices" 
       }
     ],
     buttons: []
