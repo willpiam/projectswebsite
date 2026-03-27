@@ -104,6 +104,24 @@ const projectList = [
     buttons: []
   },
   {
+    "name": "Sons Of Man: Digital Oath",
+    description: "Still a work in progress, this project builds on the Sons Of Man project by Malcolm and Simone Collins. It is a digital oath to align all descendants of man, human or otherwise, on a shared moral framework.",
+    tags: ["Blockchain", "In Progress", "Social Alignment"],
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/sons-of-man/",
+        displayText: "GitHub - Sons Of Man"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://sons-of-man-static-site.onrender.com/",
+        displayText: "Sons Of Man: Digital Oath"
+      }
+    ],
+    buttons: []
+  },
+  {
     name: "Anchor Vault: Quantum Secure Smart Accounts on Ethereum via a Chrome Plugin",
     description: "Anchor Vault is the culmination of my efforts at Pauli Group to create a user friendly yet post-quantum secure account solution. The application is distributed as a chrome browser plugin. The smart contracts are erc-4337 (account abstraction) compatible meaning the user experience is very similar to a normal Ethereum account. A novel approach to signature verification was taken. Users commit to a set of initial keys. Each key can be used only once in either Lamport (quantum secure) or ECDSA mode but not both. This means using ECDSA keys does not compromise the account to a future attack from quantum computers, this also helps prevent reuse of Lamport keys which are unsafe to use twice. Additional keys can be added in a separate operation but by default the software automatically appends three key commitments to every operation, helping ensure the user cannot run out of keys. AES encrypted backups of separate “key rings” can be created to ensure the user always has a secure recovery mechanism.",
     tags: ["Quantum Security", "Blockchain"],
@@ -200,6 +218,24 @@ const projectList = [
       {
         url: "https://intersectmbo.org/",
         displayText: "Intersect"
+      }
+    ],
+    buttons: []
+  },
+  {
+    name: "Museum of Blockchain History",
+    description: "A collection of historical and notable transactions from blockchain history. ",
+    tags: ["Blockchain", "History"],
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/museum-of-blockchain-history",
+        displayText: "GitHub - Museum of Blockchain History"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://museum-of-blockchain-history.onrender.com/",
+        displayText: "Museum of Blockchain History"
       }
     ],
     buttons: []
@@ -656,5 +692,7 @@ const tags = {
   "Simple Experiment": "hotpink",
   "Utility": "#E1BEE7",
   "In Progress": "orange",
-  "Analysis": "#B695C0"
+  "Social Alignment": "#D6C4F2",
+  "Analysis": "#B695C0",
+  "History": "#FFD700"
 };
