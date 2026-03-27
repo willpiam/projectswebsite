@@ -12,6 +12,7 @@
 <body>
   <input type="text" id="searchBar" placeholder="Search projects..." />
   <div id="projects"></div>
+  <div id="projectCount"></div>
 
   <!-- <script>
         (function() {
@@ -31,7 +32,7 @@
 
       const lower = filterText.toLowerCase();
 
-      projectList
+      const filtered = projectList
         .filter(project => {
           if (!lower) return true; // show all if no filter
           return project.name.toLowerCase().includes(lower) || project.description.toLowerCase().includes(lower);
@@ -42,8 +43,9 @@
           const bNameMatch = b.name.toLowerCase().includes(lower);
           if (aNameMatch === bNameMatch) return 0;
           return aNameMatch ? -1 : 1; // a before b if aNameMatch
-        })
-        .forEach(project => {
+        });
+
+      filtered.forEach(project => {
           const projectElement = document.createElement('div');
           projectElement.className = 'project';
 
@@ -150,6 +152,18 @@
 
           projectContainer.appendChild(projectElement);
         });
+
+      updateProjectCount(filtered.length, projectList.length);
+    }
+
+    const projectCountEl = document.getElementById('projectCount');
+
+    function updateProjectCount(shown, total) {
+      if (shown === total) {
+        projectCountEl.textContent = total + ' projects';
+      } else {
+        projectCountEl.textContent = shown + ' of ' + total + ' projects';
+      }
     }
 
     // initial render

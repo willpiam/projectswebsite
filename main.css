@@ -55,3 +55,10 @@ body {
     margin-right: 10px;
     margin-bottom: 10px;
 }
+
+#projectCount {
+    text-align: center;
+    color: #bbb;
+    font-size: 0.75em;
+    padding: 12px 0;
+}
