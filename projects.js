@@ -41,7 +41,7 @@ const projectList = [
   {
     name: "EBP: Even Better Privacy",
     description: "EBP (Even Better Privacy) is a post-quantum successor to PGP with a CLI, GUI, public identity server, and a Chromium email extension that adds signing/encryption to webmail. It uses NIST approved post-quantum algorithms; SLH-DSA (SPHINCS+) and ML-DSA (Dilithium) for signatures, and ML-KEM (Kyber) for key encapsulation--with messages encrypted under a fresh symmetric AES key per message. Identities are defined as paired signing + KEM keys with a shared fingerprint, and EBP supports publishing identities and signed revocations.",
-    tags: ["Quantum Security"], 
+    tags: ["Quantum Security", "Email"],
     sourceLinks: [{
       url: "https://github.com/willpiam/even-better-privacy",
       displayText: "GitHub - EBP"
@@ -92,13 +92,13 @@ const projectList = [
     ],
     interfaceLinks: [
       {
-       // url: "https://drep-of-the-month.onrender.com/",
-       url: "https://drep-of-the-month.williamdoyle.ca/",
+        // url: "https://drep-of-the-month.onrender.com/",
+        url: "https://drep-of-the-month.williamdoyle.ca/",
         displayText: "dRep Of The Month"
       },
       {
         url: "https://drep-of-the-month.onrender.com/",
-        displayText: "dRep Of The Month - onrender | may work better on some devices" 
+        displayText: "dRep Of The Month - onrender | may work better on some devices"
       }
     ],
     buttons: []
@@ -115,7 +115,8 @@ const projectList = [
     ],
     interfaceLinks: [
       {
-        url: "https://sons-of-man-static-site.onrender.com/",
+        //url: "https://sons-of-man-static-site.onrender.com/",
+        url: "https://sons-of-man-1.onrender.com/",
         displayText: "Sons Of Man: Digital Oath"
       }
     ],
@@ -139,19 +140,7 @@ const projectList = [
     ],
     buttons: []
   },
-  {
-    name: "Spearmint",
-    description: "A tool for minting CIP-68 tokens with proper support for burning",
-    tags: ["Blockchain"],
-    sourceLinks: [
-      {
-        url: "https://github.com/willpiam/Spearmint",
-        displayText: "GitHub"
-      }
-    ],
-    interfaceLinks: [],
-    buttons: []
-  },
+  
   // {
   //   name: "TURN Classic",
   //   description: "A CoinJoin style mixer for Cardano with support for Ada and CNTs ",
@@ -191,12 +180,13 @@ const projectList = [
     ],
     buttons: []
   },
+
   {
-    name: "Lamport Signatures On Cardano", 
+    name: "Lamport Signatures On Cardano",
     description: "A simple proof of concept for using Lamport signatures on Cardano.",
     tags: ["Quantum Security", "Blockchain"],
     sourceLinks: [
-      { 
+      {
         url: "https://github.com/willpiam/lamport-cardano/tree/master",
         displayText: "GitHub"
       }
@@ -207,8 +197,27 @@ const projectList = [
         displayText: "demo: verification of a lamport signature on testnet"
       }
     ],
-    buttons: [] 
+    buttons: []
   },
+  {
+    name: "🔨 Tools",
+    description: "A collection of digital tools I've written. These include security utilities such as a password generator and encryption tools, developer tools like the hex encoder/decoder and hex differ, and general convenience tools such as a dice roller and QR code generator.",
+    tags: ["Utility"],
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/tools",
+        displayText: "GitHub - Tools"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://williamdoyle.ca/tools",
+        displayText: "Tools"
+      }
+    ],
+    buttons: []
+  },
+
   {
     name: "Intersect Founding Member",
     description: "Intersect is where most of the off-chain work takes place for Cardano's governance. ",
@@ -218,10 +227,29 @@ const projectList = [
       {
         url: "https://intersectmbo.org/",
         displayText: "Intersect"
+      },
+      {
+        url: "https://pool.pm/asset15sdns9mrcgdq359vrj9dzs94lku2jrt4f42n8l",
+        displayText: "Intersect Founding Member NFT"
       }
     ],
     buttons: []
   },
+
+  {
+    name: "Spearmint",
+    description: "A tool for minting CIP-68 tokens with proper support for burning",
+    tags: ["Blockchain"],
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/Spearmint",
+        displayText: "GitHub"
+      }
+    ],
+    interfaceLinks: [],
+    buttons: []
+  },
+
   {
     name: "Museum of Blockchain History",
     description: "A collection of historical and notable transactions from blockchain history. ",
@@ -297,25 +325,6 @@ const projectList = [
     ],
     buttons: []
   },
- 
-  {
-    name: "🔨 Tools",
-    description: "A collection of digital tools I've written. These include security utilities such as a password generator and encryption tools, developer tools like the hex encoder/decoder and hex differ, and general convenience tools such as a dice roller and QR code generator.",
-    tags: ["Utility"],
-    sourceLinks: [
-      {
-        url: "https://github.com/willpiam/tools",
-        displayText: "GitHub - Tools"
-      }
-    ],
-    interfaceLinks: [
-      {
-        url: "https://williamdoyle.ca/tools",
-        displayText: "Tools"
-      }
-    ],
-    buttons: []
-  },
   {
     name: "Delegate To Me Button",
     description: "Buttons to let you delegate to me easily on Cardano. I also provide buttons to delegate to the AlwaysAbstain and AlwaysNoConfidence auto-dreps",
@@ -350,7 +359,7 @@ const projectList = [
       }
     ],
   },
-   {
+  {
     name: "Thin Air Coin",
     description: "A meme coin with an almost unlimited supply. 1 token can be minted for every atom of nitrogen in the atmosphere and there are no minting fees. Celebrating the SECs weird comments about our industry. Plus, a unique graffiti feature. This project is not intended to be taken seriously, but you can get some $THINAIR for free.",
     tags: ["Blockchain", "Fun"],
@@ -411,7 +420,7 @@ const projectList = [
       }
     ],
     buttons: []
-  }, 
+  },
   {
     name: "LAMB Quantum Secure Message Authentication",
     description: "A smart contract based message authentication system using quantum secure accounts. This has a more refined key management solution than what is used in the Anchor Wallet prototype.",
@@ -694,5 +703,6 @@ const tags = {
   "In Progress": "orange",
   "Social Alignment": "#D6C4F2",
   "Analysis": "#B695C0",
-  "History": "#FFD700"
+  "History": "#FFD700",
+  "Email": "#00BFA6"
 };
