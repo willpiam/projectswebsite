@@ -27,6 +27,25 @@
     const projectContainer = document.getElementById('projects');
     const searchBar = document.getElementById('searchBar');
 
+    async function copyToClipboard(text) {
+      try {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(text);
+          return true;
+        }
+      } catch (_) {}
+
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.left = '-9999px';
+      document.body.appendChild(textarea);
+      textarea.select();
+      const ok = document.execCommand('copy');
+      document.body.removeChild(textarea);
+      return ok;
+    }
+
     function renderProjects(filterText = '') {
       projectContainer.innerHTML = '';
 
@@ -131,10 +150,11 @@
             project.buttons.forEach(btn => {
               const copyBtn = document.createElement('button');
               copyBtn.textContent = btn.text;
-              copyBtn.addEventListener('click', () => {
-                navigator.clipboard.writeText(btn.copyText);
-                // Optionally, show some small feedback:
-                // alert("Copied: " + btn.copyText);
+              copyBtn.addEventListener('click', async () => {
+                const label = btn.text;
+                const ok = await copyToClipboard(btn.copyText);
+                copyBtn.textContent = ok ? 'Copied!' : 'Copy failed';
+                setTimeout(() => { copyBtn.textContent = label; }, 1500);
               });
 
               projectElement.appendChild(copyBtn);

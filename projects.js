@@ -140,7 +140,7 @@ const projectList = [
     ],
     buttons: []
   },
-  
+
   // {
   //   name: "TURN Classic",
   //   description: "A CoinJoin style mixer for Cardano with support for Ada and CNTs ",
@@ -180,25 +180,6 @@ const projectList = [
     ],
     buttons: []
   },
-
-  {
-    name: "Lamport Signatures On Cardano",
-    description: "A simple proof of concept for using Lamport signatures on Cardano.",
-    tags: ["Quantum Security", "Blockchain"],
-    sourceLinks: [
-      {
-        url: "https://github.com/willpiam/lamport-cardano/tree/master",
-        displayText: "GitHub"
-      }
-    ],
-    interfaceLinks: [
-      {
-        url: "https://preview.cardanoscan.io/transaction/eb5f4c1350987fc15d9fad530c659fee952f5d67dd6664796684ef96773bc84b",
-        displayText: "demo: verification of a lamport signature on testnet"
-      }
-    ],
-    buttons: []
-  },
   {
     name: "🔨 Tools",
     description: "A collection of digital tools I've written. These include security utilities such as a password generator and encryption tools, developer tools like the hex encoder/decoder and hex differ, and general convenience tools such as a dice roller and QR code generator.",
@@ -217,6 +198,25 @@ const projectList = [
     ],
     buttons: []
   },
+  {
+    name: "Lamport Signatures On Cardano",
+    description: "A simple proof of concept for using Lamport signatures on Cardano.",
+    tags: ["Quantum Security", "Blockchain"],
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/lamport-cardano/tree/master",
+        displayText: "GitHub"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://preview.cardanoscan.io/transaction/eb5f4c1350987fc15d9fad530c659fee952f5d67dd6664796684ef96773bc84b",
+        displayText: "demo: verification of a lamport signature on testnet"
+      }
+    ],
+    buttons: []
+  },
+
 
   {
     name: "Intersect Founding Member",
@@ -303,28 +303,28 @@ const projectList = [
     ],
     buttons: []
   },
-  {
-    name: "Quantum Secure Account Abstraction (v2)",
-    description: "Easy to use, quantum secure EVM accounts. These accounts use ERC4337 to provide seamless user experience. Consider joining the beta to try out our mobile app ",
-    tags: ["Quantum Security", "Blockchain"],
-    sourceLinks: [
-      {
-        url: "https://github.com/Pauli-Group/walletV2",
-        displayText: "GitHub - Quantum Secure Account Abstraction"
-      },
-      {
-        url: "https://sepolia.etherscan.io/address/0xF698E6E1cE4757fC7ffEB5458a9e92EfdC98D943#code",
-        displayText: "Etherscan - Quantum Secure Account Abstraction"
-      }
-    ],
-    interfaceLinks: [
-      {
-        url: "https://anchorwallet.ca/waitlist/",
-        displayText: "Anchor Wallet Waitlist"
-      }
-    ],
-    buttons: []
-  },
+  // {
+  //   name: "Quantum Secure Account Abstraction (v2)",
+  //   description: "Easy to use, quantum secure EVM accounts. These accounts use ERC4337 to provide seamless user experience. Consider joining the beta to try out our mobile app ",
+  //   tags: ["Quantum Security", "Blockchain"],
+  //   sourceLinks: [
+  //     {
+  //       url: "https://github.com/Pauli-Group/walletV2",
+  //       displayText: "GitHub - Quantum Secure Account Abstraction"
+  //     },
+  //     {
+  //       url: "https://sepolia.etherscan.io/address/0xF698E6E1cE4757fC7ffEB5458a9e92EfdC98D943#code",
+  //       displayText: "Etherscan - Quantum Secure Account Abstraction"
+  //     }
+  //   ],
+  //   interfaceLinks: [
+  //     {
+  //       url: "https://anchorwallet.ca/waitlist/",
+  //       displayText: "Anchor Wallet Waitlist"
+  //     }
+  //   ],
+  //   buttons: []
+  // },
   {
     name: "Delegate To Me Button",
     description: "Buttons to let you delegate to me easily on Cardano. I also provide buttons to delegate to the AlwaysAbstain and AlwaysNoConfidence auto-dreps",
@@ -478,6 +478,28 @@ const projectList = [
     buttons: []
   },
   {
+    name: "Torus Life",
+    description: "Run Conway's Game Of Life on the surface of a spinning torus. Render runs to video for easy sharing.",
+    tags: ["Fun"],
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/life-on-a-torus",
+        displayText: "GitHub - Torus Life"
+      }
+    ],
+    interfaceLinks: [
+      {
+        url: "https://williamdoyle.ca/toruslife/",
+        displayText: "Torus Life"
+      },
+      {
+        url: "https://x.com/william00000010/status/2074519205123092499",
+        displayText: "Video Of Torus Life on 𝕏"
+      }
+    ],
+    buttons: []
+  },
+  {
     name: "Midnight Pioneer",
     tags: ["Blockchain"],
     description: "Midnight is a privacy focused blockchain being developed by IOG. I have the privilege of being a part of the early testnet. Since late November 2023 I've been experimenting with Compact, the smart contract language for Midnight. I cannot yet publicly share any of the code I've written, but I can tell you about it in person. ",
@@ -529,37 +551,37 @@ const projectList = [
     interfaceLinks: [],
     buttons: []
   },
-  {
-    name: "Bitcoin Coinbase Spend Analysis",
-    description: "A script to gather and plot data about when early bitcoin coinbases are spent. The data is stored in an sqlite database and plotted using matplotlib.",
-    tags: ["Blockchain", "Analysis"],
-    sourceLinks: [
-      {
-        url: "https://github.com/willpiam/bitcoin-coinbase-spend-analysis",
-        displayText: "GitHub - Bitcoin Coinbase Spend Analysis"
-      }
-    ],
-    interfaceLinks: [],
-    buttons: []
-  },
-  {
-    name: "Lamport Wallet Manager",
-    description: "An off-chain library for interacting with Lamport Authenticated EVM smart contracts",
-    tags: ["Quantum Security", "Blockchain"],
-    sourceLinks: [
-      {
-        url: "https://github.com/Pauli-Group/LamportWalletManager",
-        displayText: "GitHub - Lamport Wallet Manager"
-      }
-    ],
-    interfaceLinks: [
-      {
-        url: "https://www.npmjs.com/package/lamportwalletmanager",
-        displayText: "NPM - Lamport Wallet Manager"
-      }
-    ],
-    buttons: []
-  },
+  // {
+  //   name: "Bitcoin Coinbase Spend Analysis",
+  //   description: "A script to gather and plot data about when early bitcoin coinbases are spent. The data is stored in an sqlite database and plotted using matplotlib.",
+  //   tags: ["Blockchain", "Analysis"],
+  //   sourceLinks: [
+  //     {
+  //       url: "https://github.com/willpiam/bitcoin-coinbase-spend-analysis",
+  //       displayText: "GitHub - Bitcoin Coinbase Spend Analysis"
+  //     }
+  //   ],
+  //   interfaceLinks: [],
+  //   buttons: []
+  // },
+  // {
+  //   name: "Lamport Wallet Manager",
+  //   description: "An off-chain library for interacting with Lamport Authenticated EVM smart contracts",
+  //   tags: ["Quantum Security", "Blockchain"],
+  //   sourceLinks: [
+  //     {
+  //       url: "https://github.com/Pauli-Group/LamportWalletManager",
+  //       displayText: "GitHub - Lamport Wallet Manager"
+  //     }
+  //   ],
+  //   interfaceLinks: [
+  //     {
+  //       url: "https://www.npmjs.com/package/lamportwalletmanager",
+  //       displayText: "NPM - Lamport Wallet Manager"
+  //     }
+  //   ],
+  //   buttons: []
+  // },
   // {
   //   name: "Aggregate Humanity",
   //   description: "AI generated images based on AI generated prompts. The idea being that has GPT and DALL-E have given us a view into the aggregate of our culture.",
@@ -654,19 +676,19 @@ const projectList = [
       }
     ]
   },
-  {
-    name: "Payment Addresses And Public Key Collection",
-    description: "Here I keep an extensive list of addresses and public keys. You can use these to send me money, encrypt messages for me, or verify my signatures.",
-    tags: ["identity"],
-    sourceLinks: [],
-    interfaceLinks: [
-      {
-        url: "https://pay.williamdoyle.ca",
-        displayText: "pay.williamdoyle.ca"
-      }
-    ],
-    buttons: []
-  },
+  // {
+  //   name: "Payment Addresses And Public Key Collection",
+  //   description: "Here I keep an extensive list of addresses and public keys. You can use these to send me money, encrypt messages for me, or verify my signatures.",
+  //   tags: ["identity"],
+  //   sourceLinks: [],
+  //   interfaceLinks: [
+  //     {
+  //       url: "https://pay.williamdoyle.ca",
+  //       displayText: "pay.williamdoyle.ca"
+  //     }
+  //   ],
+  //   buttons: []
+  // },
   {
     name: "williamdoyle.eth",
     description: "My ENS domain. Includes a list of addresses on various blockchains.",
