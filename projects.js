@@ -199,6 +199,18 @@ const projectList = [
     buttons: []
   },
   {
+    name: "Phonebox",
+    description: "Phonebox is a local REST API which allows any agents running on your machine to send and receive email and text messages.",
+    tags: ["AI", "Email"],
+    sourceLinks: [
+      {
+        url: "https://github.com/willpiam/phonebox",
+        displayText: "GitHub"
+      }
+    ],
+    interfaceLinks: []
+  },
+  {
     name: "Lamport Signatures On Cardano",
     description: "A simple proof of concept for using Lamport signatures on Cardano.",
     tags: ["Quantum Security", "Blockchain"],
@@ -726,5 +738,6 @@ const tags = {
   "Social Alignment": "#D6C4F2",
   "Analysis": "#B695C0",
   "History": "#FFD700",
-  "Email": "#00BFA6"
+  "Email": "#00BFA6",
+  "AI": "#00BCD4"
 };
