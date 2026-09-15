@@ -200,7 +200,7 @@ const projectList = [
   },
   {
     name: "Phonebox",
-    description: "Phonebox is a local REST API which allows any agents running on your machine to send and receive email and text messages.",
+    description: "Phonebox is a local REST API which allows any agents running on your machine to make phone calls and send and receive email and text messages.",
     tags: ["AI", "Email"],
     sourceLinks: [
       {
