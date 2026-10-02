@@ -26,6 +26,7 @@
   <script>
     const projectContainer = document.getElementById('projects');
     const searchBar = document.getElementById('searchBar');
+    let selectedIndex = -1;
 
     async function copyToClipboard(text) {
       try {
@@ -44,6 +45,38 @@
       const ok = document.execCommand('copy');
       document.body.removeChild(textarea);
       return ok;
+    }
+
+    function getOpenUrl(project) {
+      if (project.interfaceLinks?.length) return project.interfaceLinks[0].url;
+      if (project.sourceLinks?.length) return project.sourceLinks[0].url;
+      return null;
+    }
+
+    function getProjectElements() {
+      return [...projectContainer.querySelectorAll('.project')];
+    }
+
+    function setSelectedIndex(index) {
+      const projects = getProjectElements();
+      if (!projects.length) {
+        selectedIndex = -1;
+        return;
+      }
+
+      selectedIndex = Math.max(0, Math.min(index, projects.length - 1));
+      projects.forEach((el, i) => {
+        el.classList.toggle('selected', i === selectedIndex);
+      });
+      projects[selectedIndex].scrollIntoView({ block: 'nearest' });
+    }
+
+    function openSelectedProject() {
+      const projects = getProjectElements();
+      const selected = projects[selectedIndex];
+      if (!selected) return;
+      const url = selected.dataset.openUrl;
+      if (url) window.open(url, '_blank');
     }
 
     function renderProjects(filterText = '') {
@@ -67,6 +100,8 @@
       filtered.forEach(project => {
           const projectElement = document.createElement('div');
           projectElement.className = 'project';
+          const openUrl = getOpenUrl(project);
+          if (openUrl) projectElement.dataset.openUrl = openUrl;
 
           // If the project has tags, create and append the tag elements
           if (project.tags && project.tags.length > 0) {
@@ -174,6 +209,7 @@
         });
 
       updateProjectCount(filtered.length, projectList.length);
+      setSelectedIndex(filtered.length ? 0 : -1);
     }
 
     const projectCountEl = document.getElementById('projectCount');
@@ -192,6 +228,39 @@
     // re-render on search input
     searchBar.addEventListener('input', (e) => {
       renderProjects(e.target.value);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+
+      const tag = e.target.tagName;
+      const typing = tag === 'INPUT' || tag === 'TEXTAREA' || e.target.isContentEditable;
+      const inSearch = e.target === searchBar;
+
+      // "/" hotkey focuses the search bar
+      if (e.key === '/') {
+        if (typing) return;
+        e.preventDefault();
+        searchBar.focus();
+        searchBar.select();
+        return;
+      }
+
+      // Arrow navigation + Enter open (works from search bar too)
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        if (typing && !inSearch) return;
+        e.preventDefault();
+        const delta = e.key === 'ArrowDown' ? 1 : -1;
+        setSelectedIndex(selectedIndex + delta);
+        return;
+      }
+
+      if (e.key === 'Enter') {
+        if (typing && !inSearch) return;
+        if (tag === 'A' || tag === 'BUTTON') return;
+        e.preventDefault();
+        openSelectedProject();
+      }
     });
   </script>
 

@@ -10,6 +10,13 @@ body {
     border-radius: 5px;
 }
 
+.project.selected {
+    border-color: #333;
+    background-color: #f5f5f5;
+    outline: 2px solid #333;
+    outline-offset: -1px;
+}
+
 #searchBar {
     box-sizing: border-box;
     width: 100%;
