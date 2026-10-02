@@ -199,6 +199,19 @@ const projectList = [
     buttons: []
   },
   {
+    name: "The Martyrdom of Man",
+    description: "An interactive reader for Winwood Reade's The Martyrdom of Man (1872), with bring-your-own-key AI for passage insights and text-to-speech.",
+    tags: ["AI"],
+    sourceLinks: [],
+    interfaceLinks: [
+      {
+        url: "https://williamdoyle.ca/mom",
+        displayText: "The Martyrdom of Man"
+      }
+    ],
+    buttons: []
+  },
+  {
     name: "Phonebox",
     description: "Phonebox is a local REST API which allows any agents running on your machine to make phone calls and send and receive email and text messages.",
     tags: ["AI", "Email"],
